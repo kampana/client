@@ -9,15 +9,15 @@ import GroupDetailsPage from './pages/group-details/GroupDetailsPage';
 
 function App() {
   return (
-    <Layout>
-      <Router>
+    <Router>
+      <Layout>
         <Switch>
           <Route exact path="/" component={OverviewPage} />
           <Route exact path="/group/:groupId" component={GroupDetailsPage} />
           <Route render={() => <div>404 not found</div>} />
         </Switch>
-      </Router>
-    </Layout>
+      </Layout>
+    </Router>
   );
 }
 

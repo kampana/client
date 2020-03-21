@@ -1,6 +1,7 @@
 // @flow
 import React, { useState } from 'react';
 import { Menu, Container } from 'semantic-ui-react';
+import { NavLink } from 'react-router-dom';
 
 import styled from 'styled-components';
 
@@ -18,14 +19,16 @@ const Header = () => {
     <StyledHeader>
       <Container>
         <Menu>
-          <Menu.Item header>Covid-19 CiviTech</Menu.Item>
-          <Menu.Item
+          <Menu.Item header>
+            <NavLink to="/">Covid-19 CiviTech</NavLink>
+          </Menu.Item>
+          {/* <Menu.Item
             name="home"
             active={activeItem === 'home'}
-            onClick={handleItemClick}
+            // onClick={handleItemClick}
           >
-            Home
-          </Menu.Item>
+            <a href="/"
+          </Menu.Item> */}
         </Menu>
       </Container>
     </StyledHeader>
