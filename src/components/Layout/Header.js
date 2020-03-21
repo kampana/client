@@ -18,7 +18,7 @@ const Header = () => {
     <StyledHeader>
       <Container>
         <Menu>
-          <Menu.Item header>Project name</Menu.Item>
+          <Menu.Item header>Covid-19 CiviTech</Menu.Item>
           <Menu.Item
             name="home"
             active={activeItem === 'home'}
