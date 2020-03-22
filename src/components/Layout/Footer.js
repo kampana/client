@@ -28,7 +28,9 @@ const Footer = () => {
                 <List.Item>
                   <List.Icon name="github" />
                   <List.Content>
-                    <a href="https://github.com/covid19-civictech">Github</a>
+                    <a href="https://github.com/covid19-civictechTEAM">
+                      Github
+                    </a>
                   </List.Content>
                 </List.Item>
                 <List.Item>
