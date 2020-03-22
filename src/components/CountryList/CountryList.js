@@ -9,14 +9,17 @@ const CountryList = () => {
   // Loading indication set up
   const [isLoading, setIsLoading] = useState(true);
 
-  useEffect(async () => {
-    try {
-      const groups = await dummyFetchGroups();
-      setCountries(groups.map(g => g.country));
-      setIsLoading(false);
-    } catch (error) {
-      console.log(error);
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const groups = await dummyFetchGroups();
+        setCountries(groups.map(g => g.country));
+        setIsLoading(false);
+      } catch (error) {
+        console.log(error);
+      }
     }
+    fetchData();
   }, []);
 
   return (
