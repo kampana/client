@@ -1,7 +1,7 @@
 // @flow
 import React from 'react';
 import { Container, Header } from 'semantic-ui-react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 import CountryList from '../../components/CountryList/CountryList';
 

@@ -24,18 +24,18 @@ const Footer = () => {
             <Grid.Column />
             <Grid.Column>
               <List>
-                <List.Item header>Join us on</List.Item>
+                <List.Header>Join us on</List.Header>
                 <List.Item>
-                  <List.Icon name="github" />
-                  <List.Content>
+                  <List.Icon name="github" size="large" />
+                  <List.Content verticalAlign="middle">
                     <a href="https://github.com/covid19-civictechTEAM">
                       Github
                     </a>
                   </List.Content>
                 </List.Item>
                 <List.Item>
-                  <List.Icon name="slack" />
-                  <List.Content>
+                  <List.Icon name="slack" size="large" />
+                  <List.Content verticalAlign="middle">
                     <a href="https://join.slack.com/t/covid-19civictech/shared_invite/zt-cz5jx2np-FweuQCaxTTZQUWW7a1GAyA">
                       Slack
                     </a>
