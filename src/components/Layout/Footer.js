@@ -34,7 +34,7 @@ const Footer = () => {
             <Grid.Column>
               <p>
                 Want to find out more about CivicTechHub´s scope, how we built
-                it and our amazing team? label Visit us on Devpost
+                it and our amazing team?
               </p>
               <Button
                 as="a"
