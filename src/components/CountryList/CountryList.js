@@ -1,6 +1,6 @@
 // @flow
 import React, { useState, useEffect } from 'react';
-import { Flag, Label, Item, Grid } from 'semantic-ui-react';
+import { Flag, Label, Item } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 
 import { dummyFetchGroups } from '../../api/groups';
@@ -8,7 +8,7 @@ import { dummyFetchGroups } from '../../api/groups';
 const CountryList = () => {
   // TODO: replace group fetch call with countries fetch call
   const [countries, setCountries] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
+  // const [isLoading, setIsLoading] = useState(true);
 
   const getUniqueCountries = groups => {
     return groups.reduce((prev, curr) => {
@@ -32,7 +32,7 @@ const CountryList = () => {
       try {
         const groups = await dummyFetchGroups();
         setCountries(getUniqueCountries(groups));
-        setIsLoading(false);
+        // setIsLoading(false);
       } catch (error) {
         console.log(error);
       }
@@ -51,7 +51,7 @@ const CountryList = () => {
 
           return (
             // <Grid.Column width="3">
-            <Item>
+            <Item key={countryCode}>
               {/* <Item.Image>
 
                 </Item.Image> */}

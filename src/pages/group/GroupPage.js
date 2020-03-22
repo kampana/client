@@ -1,9 +1,19 @@
 // @flow
 import React from 'react';
-import { Container, Card, Icon } from 'semantic-ui-react';
+import {
+  Container,
+  Card,
+  Icon,
+  Segment,
+  Button,
+  Header,
+} from 'semantic-ui-react';
+
+import { Link } from 'react-router-dom';
 
 const HARDCODED_GROUP = {
   name: 'Code for Australia',
+  country: 'Australia',
   countryCode: 'AU',
   description: 'Help for Australia',
   links:
@@ -21,15 +31,14 @@ const GroupPage = props => {
   const {
     match: { params },
   } = props;
-
-  console.log('group id: ', params.groupId);
+  // const { groupId } = params;
 
   // TODO: maybe move this logic into a new separate GroupLinks component?
   const groupLinks = HARDCODED_GROUP.links.split('|||');
   const extra = groupLinks.map(groupLink => {
     const [linkDescription, linkUrl, linkType] = groupLink.split('>>>');
     return (
-      <div>
+      <div key={linkType}>
         {linkDescription} - <a href={linkUrl}>{linkUrl}</a>
         <br />
         <Icon name={LINK_TYPE_ICONS[linkType]} />
@@ -39,6 +48,17 @@ const GroupPage = props => {
 
   return (
     <Container>
+      <Segment basic style={{ paddingLeft: '0', paddingRight: '0' }}>
+        <Link to={`/country/${HARDCODED_GROUP.countryCode.toLowerCase()}`}>
+          <Button>
+            <Icon name="arrow left" />
+            {HARDCODED_GROUP.country}
+          </Button>
+        </Link>
+
+        <Header as="h1">{HARDCODED_GROUP.name}</Header>
+      </Segment>
+
       <Card
         header={HARDCODED_GROUP.name}
         meta={HARDCODED_GROUP.countryCode}
