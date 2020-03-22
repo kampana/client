@@ -1,7 +1,7 @@
 // @flow
 import React, { useState, useEffect } from 'react';
 import { Card, Image, Dimmer, Loader } from 'semantic-ui-react';
-import { Link } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
 import { dummyFetchGroups } from '../../api/groups';
 
@@ -13,6 +13,7 @@ const GroupList = (props: Props) => {
   const { countryId } = props;
   const [groups, setGroups] = useState([]);
   const [loading, setLoading] = useState([]);
+  const history = useHistory();
 
   useEffect(() => {
     async function fetchData() {
@@ -49,20 +50,20 @@ const GroupList = (props: Props) => {
             const { 'group name': groupName, description } = g;
 
             return (
-              <Link to={`/group/${demoGroupID}`} key={groupName}>
-                <Card>
-                  <Image src="https://picsum.photos/800/600" />
-                  <Card.Content>
-                    <Card.Header>{groupName}</Card.Header>
-                    {/* <Card.Meta>{description}</Card.Meta> */}
-                    <Card.Description>{description}</Card.Description>
-                  </Card.Content>
+              <Card onClick={() => history.push(`/group/${demoGroupID}`)}>
+                {/* <Link to={`/group/${demoGroupID}`} key={groupName}> */}
+                <Image src="https://picsum.photos/800/600" />
+                <Card.Content>
+                  <Card.Header>{groupName}</Card.Header>
+                  {/* <Card.Meta>{description}</Card.Meta> */}
+                  <Card.Description>{description}</Card.Description>
+                </Card.Content>
+                {/* </Link> */}
 
-                  {/* <Card.Content extra>
+                {/* <Card.Content extra>
                     <Button primary>View</Button>
                   </Card.Content> */}
-                </Card>
-              </Link>
+              </Card>
             );
           })}
         </Card.Group>
