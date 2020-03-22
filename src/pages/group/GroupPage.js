@@ -17,7 +17,7 @@ const LINK_TYPE_ICONS = {
   WEBSITE: 'linkify',
 };
 
-const GroupDetailsPage = props => {
+const GroupPage = props => {
   const {
     match: { params },
   } = props;
@@ -49,4 +49,4 @@ const GroupDetailsPage = props => {
   );
 };
 
-export default GroupDetailsPage;
+export default GroupPage;

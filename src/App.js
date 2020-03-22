@@ -4,16 +4,18 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import 'semantic-ui-css/semantic.min.css';
 
 import Layout from './components/Layout';
-import OverviewPage from './pages/overview/OverviewPage';
-import GroupDetailsPage from './pages/group-details/GroupDetailsPage';
+import HomePage from './pages/home/HomePage';
+import CountryPage from './pages/country/CountryPage';
+import GroupPage from './pages/group/GroupPage';
 
 function App() {
   return (
     <Router>
       <Layout>
         <Switch>
-          <Route exact path="/" component={OverviewPage} />
-          <Route exact path="/group/:groupId" component={GroupDetailsPage} />
+          <Route exact path="/" component={HomePage} />
+          <Route exact path="/country/:countryId" component={CountryPage} />
+          <Route exact path="/group/:groupId" component={GroupPage} />
           <Route render={() => <div>404 not found</div>} />
         </Switch>
       </Layout>
