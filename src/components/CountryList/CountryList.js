@@ -20,7 +20,7 @@ const CountryList = () => {
       if (!(prev[countryCode] || {}).count) {
         prev[countryCode] = { ...curr, count: 1 };
       } else {
-        prev[countryCode].count = prev[countryCode].count + 1;
+        prev[countryCode].count += 1;
       }
 
       return prev;
