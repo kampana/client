@@ -84,7 +84,10 @@ const GroupPage = props => {
       </Segment>
 
       <Card
-        image={group.logo}
+        image={
+          group.logo ||
+          'https://www.hotukdeals.com/assets/img/profile-placeholder_f56af.png'
+        }
         header={group.name}
         meta={group['country_code (iso 3661-alpha2)']}
         description={group.description}
