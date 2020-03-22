@@ -8,7 +8,7 @@ const WirvsvirushackPage = () => {
       <Header as="h1" textAlign="center" style={{ fontSize: '80px' }}>
         <br />
         <b>Wir bleiben für euch zuhause #wirvsvirushack</b>
-        <Header.Subheader style={{ fontSize: '20px' }}>
+        <Header.Subheader style={{ fontSize: '35px' }}>
           <i>- Team CivicTechHub</i>
         </Header.Subheader>
       </Header>
