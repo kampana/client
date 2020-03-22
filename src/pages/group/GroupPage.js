@@ -2,10 +2,12 @@
 import React, { useState, useEffect } from 'react';
 import {
   Container,
-  Card,
+  List,
   Icon,
   Segment,
   Button,
+  Image,
+  Grid,
   Header,
   Dimmer,
   Loader,
@@ -51,18 +53,7 @@ const GroupPage = props => {
       </Dimmer>
     );
   }
-
   const groupLinks = group.links.split('|||');
-  const extra = groupLinks.map(groupLink => {
-    const [linkDescription, linkUrl, linkType] = groupLink.split('>>>');
-    return (
-      <div key={linkType}>
-        {linkDescription} - <a href={linkUrl}>{linkUrl}</a>
-        <br />
-        <Icon name={LINK_TYPE_ICONS[linkType]} />
-      </div>
-    );
-  });
 
   return (
     <Container>
@@ -77,17 +68,45 @@ const GroupPage = props => {
             {group.country}
           </Button>
         </Link>
-
-        <Header as="h1">{group.name}</Header>
       </Segment>
 
-      <Card
-        image={group.logo}
-        header={group.name}
-        meta={group['country_code (iso 3661-alpha2)']}
-        description={group.description}
-        extra={extra}
-      />
+      <Image src={group.logo} style={{ marginBottom: '5rem' }} />
+
+      <Grid columns={2}>
+        <Grid.Row>
+          <Grid.Column>
+            <Segment>
+              <Header as="h1">{group['group name']}</Header>
+              <p>{group.description}</p>
+            </Segment>
+          </Grid.Column>
+
+          <Grid.Column>
+            <Segment>
+              <Header as="h2">Resources & Links</Header>
+              <List>
+                {groupLinks.map(groupLink => {
+                  const [linkDescription, linkUrl, linkType] = groupLink.split(
+                    '>>>'
+                  );
+
+                  return (
+                    <List.Item>
+                      <List.Icon
+                        name={LINK_TYPE_ICONS[linkType]}
+                        size="large"
+                      />
+                      <List.Content verticalAlign="middle">
+                        <a href={linkUrl}>{linkDescription}</a>
+                      </List.Content>
+                    </List.Item>
+                  );
+                })}
+              </List>
+            </Segment>
+          </Grid.Column>
+        </Grid.Row>
+      </Grid>
     </Container>
   );
 };
