@@ -1,6 +1,7 @@
 // @flow
 import React from 'react';
 // import logo from '../../images/logo.svg';
+import { withRouter } from 'react-router-dom';
 import styled from 'styled-components';
 
 import Header from './Header';
@@ -21,13 +22,13 @@ const Layout = props => {
 
   return (
     <App>
-      <Header />
+      {props.location.pathname !== '/wirvsvirushack' && <Header />}
 
       <main>{children}</main>
 
-      <Footer />
+      {props.location.pathname !== '/wirvsvirushack' && <Footer />}
     </App>
   );
 };
 
-export default Layout;
+export default withRouter(Layout);
