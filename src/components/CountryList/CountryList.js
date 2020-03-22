@@ -1,7 +1,7 @@
 // @flow
 import React, { useState, useEffect } from 'react';
-import { Flag, Label, Item } from 'semantic-ui-react';
-import { Link } from 'react-router-dom';
+import { Flag, Card } from 'semantic-ui-react';
+import { useHistory } from 'react-router-dom';
 
 import { dummyFetchGroups } from '../../api/groups';
 
@@ -9,6 +9,7 @@ const CountryList = () => {
   // TODO: replace group fetch call with countries fetch call
   const [countries, setCountries] = useState([]);
   // const [isLoading, setIsLoading] = useState(true);
+  const history = useHistory();
 
   const getUniqueCountries = groups => {
     return groups.reduce((prev, curr) => {
@@ -45,38 +46,39 @@ const CountryList = () => {
   }, []);
 
   return (
-    <Item.Group>
+    <Card.Group>
       {Object.values(countries).map(g => {
         const { country, count } = g;
         const name = country.toLowerCase();
         const countryCode = g.country_code;
 
         return (
-          <Item key={countryCode}>
+          <Card
+            onClick={() => history.push(`/country/${countryCode}`)}
+            key={countryCode}
+          >
             {/* <Item.Image>
 
                 </Item.Image> */}
 
-            <Item.Content>
-              <Item.Header>
+            <Card.Content>
+              <Card.Header>
                 <Flag name={name} />
-                <Link to={`/country/${countryCode}`}>{country}</Link>
-              </Item.Header>
+                {country}
+                {/* <Link to={`/country/${countryCode}`}></Link> */}
+              </Card.Header>
 
               {/* <Item.Description>Find groups in {country}.</Item.Description> */}
 
-              <Item.Meta>
-                <Label>
-                  Groups
-                  {/* <Icon name="clipboard outline" /> */}
-                  <Label.Detail>{count}</Label.Detail>
-                </Label>
-              </Item.Meta>
-            </Item.Content>
-          </Item>
+              <Card.Meta>
+                {count} {count === 1 ? 'group' : 'groups'}
+                {/* <Icon name="clipboard outline" /> */}
+              </Card.Meta>
+            </Card.Content>
+          </Card>
         );
       })}
-    </Item.Group>
+    </Card.Group>
   );
 };
 

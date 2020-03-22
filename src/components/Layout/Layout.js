@@ -2,10 +2,18 @@
 import React from 'react';
 // import logo from '../../images/logo.svg';
 import { withRouter } from 'react-router-dom';
-import styled from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
 
 import Header from './Header';
 import Footer from './Footer';
+
+const GlobalStyle = createGlobalStyle`
+  h1 {
+    &.ui.header {
+      margin-bottom: 2rem; 
+    }
+  }
+`;
 
 const App = styled.div`
   display: flex;
@@ -22,6 +30,7 @@ const Layout = props => {
 
   return (
     <App>
+      <GlobalStyle />
       {props.location.pathname !== '/wirvsvirushack' && <Header />}
 
       <main>{children}</main>
