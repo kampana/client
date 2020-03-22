@@ -1,5 +1,5 @@
 // @flow
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   Container,
   Card,
@@ -7,34 +7,54 @@ import {
   Segment,
   Button,
   Header,
+  Dimmer,
+  Loader,
 } from 'semantic-ui-react';
-
 import { Link } from 'react-router-dom';
 
-const HARDCODED_GROUP = {
-  name: 'Code for Australia',
-  country: 'Australia',
-  countryCode: 'AU',
-  description: 'Help for Australia',
-  links:
-    'Our awesome Slack channel>>>https://foo.slack.com>>>SLACK|||Our sweet Twitter account>>>https://twitter.com/codeforaustralia>>>TWITTER|||Our amazing website>>>https://www.codeforaustralie.com>>>WEBSITE',
-};
+import { dummyFetchGroups } from '../../api/groups';
 
 const LINK_TYPE_ICONS = {
   // TODO: add all possible link type icons
   SLACK: 'slack',
   TWITTER: 'twitter',
   WEBSITE: 'linkify',
+  FACEBOOK: 'facebook',
+  DISCORD: 'discord',
 };
 
 const GroupPage = props => {
-  // const {
-  //   match: { params },
-  // } = props;
-  // const { groupId } = params;
+  const {
+    match: { params },
+  } = props;
+  const { groupId } = params;
+  const [group, setGroup] = useState([]);
+  const [loading, setLoading] = useState(true);
 
-  // TODO: maybe move this logic into a new separate GroupLinks component?
-  const groupLinks = HARDCODED_GROUP.links.split('|||');
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        setLoading(true);
+        const allGroups = await dummyFetchGroups();
+        setGroup(allGroups.find(g => g['group name'] === groupId));
+        setLoading(false);
+      } catch (error) {
+        setLoading(false);
+        console.log(error);
+      }
+    }
+    fetchData();
+  }, [groupId]);
+
+  if (loading) {
+    return (
+      <Dimmer>
+        <Loader />
+      </Dimmer>
+    );
+  }
+
+  const groupLinks = group.links.split('|||');
   const extra = groupLinks.map(groupLink => {
     const [linkDescription, linkUrl, linkType] = groupLink.split('>>>');
     return (
@@ -49,20 +69,25 @@ const GroupPage = props => {
   return (
     <Container>
       <Segment basic style={{ paddingLeft: '0', paddingRight: '0' }}>
-        <Link to={`/country/${HARDCODED_GROUP.countryCode.toLowerCase()}`}>
+        <Link
+          to={`/country/${group[
+            'country_code (iso 3661-alpha2)'
+          ].toLowerCase()}`}
+        >
           <Button>
             <Icon name="arrow left" />
-            {HARDCODED_GROUP.country}
+            {group.country}
           </Button>
         </Link>
 
-        <Header as="h1">{HARDCODED_GROUP.name}</Header>
+        <Header as="h1">{group.name}</Header>
       </Segment>
 
       <Card
-        header={HARDCODED_GROUP.name}
-        meta={HARDCODED_GROUP.countryCode}
-        description={HARDCODED_GROUP.description}
+        image={group.logo}
+        header={group.name}
+        meta={group['country_code (iso 3661-alpha2)']}
+        description={group.description}
         extra={extra}
       />
     </Container>
