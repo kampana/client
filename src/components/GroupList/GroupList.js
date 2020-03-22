@@ -46,13 +46,12 @@ const GroupList = (props: Props) => {
         <Card.Group>
           {groups.map(g => {
             // TODO: Remove demo id
-            const demoGroupID = 1;
-            const { 'group name': groupName, description } = g;
+            const { 'group name': groupName, description, logo } = g;
 
             return (
-              <Card onClick={() => history.push(`/group/${demoGroupID}`)}>
+              <Card onClick={() => history.push(`/group/${groupName}`)}>
                 {/* <Link to={`/group/${demoGroupID}`} key={groupName}> */}
-                <Image src="https://picsum.photos/800/600" />
+                <Image src={logo} />
                 <Card.Content>
                   <Card.Header>{groupName}</Card.Header>
                   {/* <Card.Meta>{description}</Card.Meta> */}

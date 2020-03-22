@@ -3,313 +3,352 @@
     "group name": "Code for Australia",
     "country": "Australia",
     "country_code (iso 3661-alpha2)": "AU",
+    "logo": "https://i.imgur.com/RhkDrm4.png",
     "description": "Help for Australia",
     "Topics (separated by |||)": "Software|||Digital|||Foo",
-    "Links (separated by |||) (Format: text>>>url>>>type) (type SLACK, TELEGRAM, FACEBOOK, TWITTER, INSTAGRAM, TRELLO, WEBSITE)": "Tretet bei>>>https://foo.slack.com>>>SLACK|||Folgt uns>>>https://twitter.com/codeforaustralia>>>TWITTER|||Besucht uns>>>https://www.codeforaustralia.com>>>WEBSITE"
+    "links": "Tretet bei>>>https://foo.slack.com>>>SLACK|||Folgt uns>>>https://twitter.com/codeforaustralia>>>TWITTER|||Besucht uns>>>https://www.codeforaustralia.com>>>WEBSITE"
   },
   {
     "group name": "BreathOfLife",
     "country": "Belgium",
     "country_code (iso 3661-alpha2)": "BE",
+    "logo": "",
     "description": "Breathing Device, Syringe pump",
     "Topics (separated by |||)": "Breathing Device|||syringe pump",
-    "Links (separated by |||) (Format: text>>>url>>>type) (type SLACK, TELEGRAM, FACEBOOK, TWITTER, INSTAGRAM, TRELLO, WEBSITE)": "breathoflifegroupe.slack.com>>>https://join.slack.com/t/breathoflifegroupe/shared_invite/zt-csnedr51-pa1k0h5aEN6Gvuk2BKRZjw>>>SLACK"
+    "links": "breathoflifegroupe.slack.com>>>https://join.slack.com/t/breathoflifegroupe/shared_invite/zt-csnedr51-pa1k0h5aEN6Gvuk2BKRZjw>>>SLACK"
   },
   {
     "group name": "Fablabs of Belgium",
     "country": "Belgium",
     "country_code (iso 3661-alpha2)": "BE",
+    "logo": "",
     "description": "Fablabs of Belgium. Centralization and pooling of information, initiatives and possible demands from medical world (related to the support that could bring the Fablabs and makers community to the Covid-19 epidemy fight.",
     "Topics (separated by |||)": "Pooling of Information|||initiatives|||medical",
-    "Links (separated by |||) (Format: text>>>url>>>type) (type SLACK, TELEGRAM, FACEBOOK, TWITTER, INSTAGRAM, TRELLO, WEBSITE)": "MakeInBelgium>>>https://makeinbelgium.slack.com/join/shared_invite/zt-784dho2p-lHZSCmJoFT0nPHuHl7rp3g>>>SLACK|||Coronadenktank>>>https://www.coronadenktank.be/>>>WEBSITE|||Coronadenktank>>>https://twitter.com/coronadenktank>>>TWITTER"
+    "links": "MakeInBelgium>>>https://makeinbelgium.slack.com/join/shared_invite/zt-784dho2p-lHZSCmJoFT0nPHuHl7rp3g>>>SLACK|||Coronadenktank>>>https://www.coronadenktank.be/>>>WEBSITE|||Coronadenktank>>>https://twitter.com/coronadenktank>>>TWITTER"
   },
   {
     "group name": "MitigateCorona",
     "country": "Belgium",
     "country_code (iso 3661-alpha2)": "BE",
+    "logo": "",
     "description": "This Slack is an addition to the \"Make in Belgium\" Slack, which is very hectic at the moment. This place brings together Belgian academics and researchers: engineers, biomedical and other researchers. We are specifically looking for engineers and others who can help with alternative production of ventilators in the #technical-help channel and for Dutch-speaking researchers from life sciences in the #sci-comm channel. All other fields of expertise welcome, too! We are also open for people from the arts: feel free to create a dedicated channel.",
     "Topics (separated by |||)": "Academics|||researchers|||engineers|||biomedical",
-    "Links (separated by |||) (Format: text>>>url>>>type) (type SLACK, TELEGRAM, FACEBOOK, TWITTER, INSTAGRAM, TRELLO, WEBSITE)": "MitigateCorona>>> https://join.slack.com/t/mitigatecorona/shared_invite/zt-ctipi686-_cvH5JGRAx6SkUGkfAJ1Cw>>>SLACK"
+    "links": "MitigateCorona>>> https://join.slack.com/t/mitigatecorona/shared_invite/zt-ctipi686-_cvH5JGRAx6SkUGkfAJ1Cw>>>SLACK"
   },
   {
     "group name": "ImaGuru",
     "country": "Belarus",
     "country_code (iso 3661-alpha2)": "BY",
+    "logo": "https://i.imgur.com/aE2gBTw.png",
     "description": "All the innovator communities around the world are joining forces to combat the challenging time. Sam Altman from YC announced his intention to invest into COVID 19 startups, European commission secured 164M Euro to fund innovators to resist the virus, our colleagues from some European countries organize events and hackathons online.This is our turn to raise the Imaguru community's voice, fight the crisis, and help stop the virus from spreading in Europe and globally with new ideas, tools, and solutions.We call on all Imaguru friends, hackers, developers, startups and corporations to join us at Imaguru online hackathon #hackathome this Friday, March 20.",
     "Topics (separated by |||)": "ideas|||tools|||hacker|||startup|||corporation",
-    "Links (separated by |||) (Format: text>>>url>>>type) (type SLACK, TELEGRAM, FACEBOOK, TWITTER, INSTAGRAM, TRELLO, WEBSITE)": "ImaGuru>>>imaguruhackathome.slack.com>>>SLACK|||ImaGuru>>>http://hackathome.imaguru.by/en>>>WEBSITE"
+    "links": "ImaGuru>>>imaguruhackathome.slack.com>>>SLACK|||ImaGuru>>>http://hackathome.imaguru.by/en>>>WEBSITE"
   },
   {
     "group name": "CODVID-19",
     "country": "Canada",
     "country_code (iso 3661-alpha2)": "CA",
+    "logo": "https://i.imgur.com/7DTvqiS.png",
     "description": "With the COVID-19 pandemic in full swing, many people are looking at a lot of free time stuck indoors. Avoid cabin fever and use that time to make a difference in your community and the fight against COVID-19 by joining CODEVID-19, the world�s first pandemic hackathon! The purpose of the hackathon ultimately isn�t to win prizes, it�s to build useful apps that people can use to manage and survive during the COVID-19 pandemic Like the COVID-19 situation the hackathon resources and structure will change as time goes on! The first prize (called the first responder prize) will be awarded March 24th and there will be many more to come!",
     "Topics (separated by |||)": "hackathon|||idea|||apps",
-    "Links (separated by |||) (Format: text>>>url>>>type) (type SLACK, TELEGRAM, FACEBOOK, TWITTER, INSTAGRAM, TRELLO, WEBSITE)": "CODEVID-19>>>https://codevid19.com/>>>WEBSITE|||CODEVID-19>>>https://twitter.com/devedmonton>>>TWITTER|||"
+    "links": "CODEVID-19>>>https://codevid19.com/>>>WEBSITE|||CODEVID-19>>>https://twitter.com/devedmonton>>>TWITTER|||"
   },
   {
     "group name": "Code Life Ventilator Challenge",
     "country": "Canada",
     "country_code (iso 3661-alpha2)": "CA",
+    "logo": "",
     "description": "To design a low-cost, simple, easy-to-use and easy-to-build ventilator that can serve the COVID patients, in an emergency timeframe.",
     "Topics (separated by |||)": "ventilator|||medical|||3D-Printer",
-    "Links (separated by |||) (Format: text>>>url>>>type) (type SLACK, TELEGRAM, FACEBOOK, TWITTER, INSTAGRAM, TRELLO, WEBSITE)": "Code Life Ventilator Challenge>>>https://www.agorize.com/en/challenges/code-life-challenge/>>>WEBSITE"
+    "links": "Code Life Ventilator Challenge>>>https://www.agorize.com/en/challenges/code-life-challenge/>>>WEBSITE"
   },
   {
     "group name": "Frena la curva",
     "country": "Colombia",
     "country_code (iso 3661-alpha2)": "CO",
+    "logo": "https://i.imgur.com/pPGIw40.png",
     "description": "Citizen self-help network against # COVID19 The coronavirus pandemic (COVID-19) faces us with an enormous challenge as a planet, as a country and as a society. In these difficult weeks we must give the best of ourselves and ourselves and we must be more united than ever.",
     "Topics (separated by |||)": "help|||initiative|||idea",
-    "Links (separated by |||) (Format: text>>>url>>>type) (type SLACK, TELEGRAM, FACEBOOK, TWITTER, INSTAGRAM, TRELLO, WEBSITE)": "Frena la curva>>>https://t.me/joinchat/AktO5Fjj_OSd5nXeUl-v7g>>>TELEGRAM|||Frena la curva>>>https://colombia.frenalacurva.net/e119>>>WEBSITE"
+    "links": "Frena la curva>>>https://t.me/joinchat/AktO5Fjj_OSd5nXeUl-v7g>>>TELEGRAM|||Frena la curva>>>https://colombia.frenalacurva.net/e119>>>WEBSITE"
   },
   {
     "group name": "Wuhan2020",
     "country": "China",
     "country_code (iso 3661-alpha2)": "CN",
+    "logo": "https://i.imgur.com/wzizJDp.png",
     "description": "Dear friends and volunteers, we are the core organizers of wuhan2020, a project on GitHub aiming to serve this combat against 2019 Novel Coronavirus (COVID-19). This is an Open Source project constructed and maintained by all of us for a better and more effective collaboration that assists the self-organized rescue. The things we are working on:to create a data service for real-time synchronization among hospitals, factories and procurement.to call on more people to participate in this project with their professional skills and various resources.to proceed with our collaborative tasks and constantly stay motivated by the spirit of Open Source community.The online web entrance of our project: Information Collection Platform for Wuhan COVID-19 Epidemic Prevention (in Chinese ????????????).",
     "Topics (separated by |||)": "collaboration|||open source|||data service",
-    "Links (separated by |||) (Format: text>>>url>>>type) (type SLACK, TELEGRAM, FACEBOOK, TWITTER, INSTAGRAM, TRELLO, WEBSITE)": "Wuhan 2020>>>https://join.slack.com/t/wuhan2020/shared_invite/enQtOTQxMTU4MzgyNTYwLWIxMTMyNWI4NWE2YTk3NGRjZGJhMjUzNmJhMjg1MDQ3OTEzNDE5NGY4MWFhMjRlYWU4MmE3ZGQyOGU4N2YwMzY>>>SLACK|||Wuhan 2020>>>https://community.wuhan2020.org.cn/en-us/community/index.html>>>WEBSITE"
+    "links": "Wuhan 2020>>>https://join.slack.com/t/wuhan2020/shared_invite/enQtOTQxMTU4MzgyNTYwLWIxMTMyNWI4NWE2YTk3NGRjZGJhMjUzNmJhMjg1MDQ3OTEzNDE5NGY4MWFhMjRlYWU4MmE3ZGQyOGU4N2YwMzY>>>SLACK|||Wuhan 2020>>>https://community.wuhan2020.org.cn/en-us/community/index.html>>>WEBSITE"
   },
   {
     "group name": "COVID19CZ",
     "country": "Czech Republic",
     "country_code (iso 3661-alpha2)": "CZ",
+    "logo": "https://i.imgur.com/O6mpzxW.jpg",
     "description": "COVID19CZ is a joint activity of several Czech technology companies and IT enthusiasts aimed at helping to fight COVID-19. The purpose of the activity is to offer modern technologies and assistance with communication where they can facilitate the fight against viral infection, either by accessing information or by data analysis facilitating the detection of outbreaks.At present, intensive negotiations are under way with the state administration about which of the approaches, technologies or applications would help both the hygienists, the Ministry of Health, as well as medical staff and volunteers to manage the infection. More than 500 IT specialist enthusiasts are available who are willing to invest their time in developing the necessary smart application and high-quality solution that also respects the privacy of users.",
     "Topics (separated by |||)": "technology|||smart application|||collaboration",
-    "Links (separated by |||) (Format: text>>>url>>>type) (type SLACK, TELEGRAM, FACEBOOK, TWITTER, INSTAGRAM, TRELLO, WEBSITE)": "COVID19CZ>>>https://covid19cz.cz/>>>WEBSITE|||COVID19CZ>>>https://www.facebook.com/groups/covid19cz/>>>FACEBOOK"
+    "links": "COVID19CZ>>>https://covid19cz.cz/>>>WEBSITE|||COVID19CZ>>>https://www.facebook.com/groups/covid19cz/>>>FACEBOOK"
   },
   {
     "group name": "Hack the crisis",
     "country": "Estonia",
     "country_code (iso 3661-alpha2)": "EE",
+    "logo": "https://i.imgur.com/BnE9aR6.jpg",
     "description": "WE ARE ACCELERATING ESTONIA TO NEW HEIGHTS! Starting this evening, Accelerate Estonia and Garage48 will host an online hackathon so that Estonia can emerge from the crisis stronger than ever. Now is the prime time to design, test and launch moonshot ideas that will either help tackle the crisis or position Estonia well for the aftermath. Accelerate Estonia will sponsor up to 5 ideas with 5K for execution during the state of emergency and the full support of the minister for ICT and Foreign Trade, Mr. Kaimar Karu.",
     "Topics (separated by |||)": "hackathon|||idea|||apps|||programming",
-    "Links (separated by |||) (Format: text>>>url>>>type) (type SLACK, TELEGRAM, FACEBOOK, TWITTER, INSTAGRAM, TRELLO, WEBSITE)": "Hack the crisis>>>https://join.slack.com/t/hackthecrisis/shared_invite/zt-cleso3f7-HiRf6e72pKGyPqmsOci4Mw>>>SLACK|||Hack the crisis>>>https://www.facebook.com/events/garage48/hack-the-crisis/204692110602347/>>>FACEBOOK"
+    "links": "Hack the crisis>>>https://join.slack.com/t/hackthecrisis/shared_invite/zt-cleso3f7-HiRf6e72pKGyPqmsOci4Mw>>>SLACK|||Hack the crisis>>>https://www.facebook.com/events/garage48/hack-the-crisis/204692110602347/>>>FACEBOOK"
   },
   {
     "group name": "Hack the crisis Finland",
     "country": "Finland",
     "country_code (iso 3661-alpha2)": "FI",
+    "logo": "https://i.imgur.com/ICVZ7vp.jpg",
     "description": "Hack the Crisis is an online hackathon organised by local companies, startups and tech communities, together with the Finnish government.This is a call to action to each and everyone to participate in the fight and it is inspired by our southern neighbors from Estonia, who started the movement with their Hack the Crisis.There is no us and them. We are in urge to Save lives, Save communities, Save businesses. We Finns are at our best under pressure. In this critical moment, our task is to work together as a nation to solve one of the biggest crises of our lifetime.",
     "Topics (separated by |||)": "start up|||tech|||collaboration",
-    "Links (separated by |||) (Format: text>>>url>>>type) (type SLACK, TELEGRAM, FACEBOOK, TWITTER, INSTAGRAM, TRELLO, WEBSITE)": "Hack the crisis Finland>>>https://hackthecrisisfinland.slack.com/join/shared_invite/zt-cv34hdk4-hI9chEn0cUF~MAQBFqCvhg>>>SLACK|||Hack the crisis Finland>>>https://www.hackthecrisisfinland.com/>>>WEBSITE"
+    "links": "Hack the crisis Finland>>>https://hackthecrisisfinland.slack.com/join/shared_invite/zt-cv34hdk4-hI9chEn0cUF~MAQBFqCvhg>>>SLACK|||Hack the crisis Finland>>>https://www.hackthecrisisfinland.com/>>>WEBSITE"
   },
   {
     "group name": "Dataagainstcovid-19",
     "country": "France",
     "country_code (iso 3661-alpha2)": "FR",
+    "logo": "",
     "description": "This Slack is a space for exchange around the collection and analysis of data, their representation and the understanding of data-related issues for healthcare workers and civil society.",
     "Topics (separated by |||)": "exchange|||collaboration|||healthcare|||data",
-    "Links (separated by |||) (Format: text>>>url>>>type) (type SLACK, TELEGRAM, FACEBOOK, TWITTER, INSTAGRAM, TRELLO, WEBSITE)": "Dataagainstcovid-19>>>https://dataagainstcovid-19.slack.com/join/shared_invite/zt-cgsplso2-LIvWeRHlf1ZFIrh~SPj~IA>>>SLACK"
+    "links": "Dataagainstcovid-19>>>https://dataagainstcovid-19.slack.com/join/shared_invite/zt-cgsplso2-LIvWeRHlf1ZFIrh~SPj~IA>>>SLACK"
   },
   {
     "group name": "Entraide maker - COVID 19",
     "country": "France",
     "country_code (iso 3661-alpha2)": "FR",
+    "logo": "",
     "description": "An attempt to make a repository of Maker initiatives and document solutions to support hospital and health care giver's needs during the Pandemic Crisis/with everyone at home.Documenting urgent needs both universal and local that reanimation services and healthcare providers are facing during the pandemic crisis: technical and detailed descriptions of problems and parts, mandatory materials and procedures, safety concerns.3D Parametric Model Designs coordination groups, Medical devices Engineering support groupFiles and tutorials for digital fabrication (included 3D printers) to make items to offer to local hospitals.What solutions to get access to filament for 3D printers and other consumables to make the parts. Crowdfunding/ Donations/Filament and materials factories' support. Strategies, contacts, processes and feedback.Documenting process to organise 3D printing volunteers to actually print and dispatch the parts in their local hospitals.",
     "Topics (separated by |||)": "technology|||collaboration|||3d print|||medical",
-    "Links (separated by |||) (Format: text>>>url>>>type) (type SLACK, TELEGRAM, FACEBOOK, TWITTER, INSTAGRAM, TRELLO, WEBSITE)": "Entraide maker - COVID 19>>>https://discord.gg/N9PANj2>>>DISCORD|||Entraide maker - COVID 19>>>https://www.facebook.com/groups/1120744844933688/>>>FACEBOOK"
+    "links": "Entraide maker - COVID 19>>>https://discord.gg/N9PANj2>>>DISCORD|||Entraide maker - COVID 19>>>https://www.facebook.com/groups/1120744844933688/>>>FACEBOOK"
   },
   {
     "group name": "Hack la crise",
     "country": "France",
     "country_code (iso 3661-alpha2)": "FR",
+    "logo": "https://i.imgur.com/2kCX8nR.png",
     "description": "En cette p�riode de crise, nous vous invitons � rejoindre Hack La Crise - a hackathon virtuel organis� par des b�n�voles via la plateforme slack du vendredi 20 mars � 19h au dimanche 22 mars � 19h.",
     "Topics (separated by |||)": "hackathon|||idea|||collaboration",
-    "Links (separated by |||) (Format: text>>>url>>>type) (type SLACK, TELEGRAM, FACEBOOK, TWITTER, INSTAGRAM, TRELLO, WEBSITE)": "Hack la crise>>>http://bit.ly/slackhacklacrise>>>SLACK|||Hack la crise>>>https://www.hacklacrise.fr/>>>WEBSITE"
+    "links": "Hack la crise>>>http://bit.ly/slackhacklacrise>>>SLACK|||Hack la crise>>>https://www.hacklacrise.fr/>>>WEBSITE"
   },
   {
     "group name": "Hacking Health Camp 2020",
     "country": "France",
     "country_code (iso 3661-alpha2)": "FR",
+    "logo": "https://i.imgur.com/wbLHCxd.png",
     "description": "Online version of Hacking Health Camp 2020 to act now against Coronavirus. We are a community of health innovators. Let's mobilize to quickly create digital tools that will help healthcare professionalsWe are thousands of people motivated to advance health, each having a skill, a network, useful information in this exceptional situation.Take advantage of the confinement to help solve problems related to coronavirus management, in the form of an online hackathon.Healthcare professionals are already submitting problems to us, we invite you to join a project team and help quickly prototype solutions.",
     "Topics (separated by |||)": "healthcare|||medical|||collaboration",
-    "Links (separated by |||) (Format: text>>>url>>>type) (type SLACK, TELEGRAM, FACEBOOK, TWITTER, INSTAGRAM, TRELLO, WEBSITE)": "Hacking Health Camp 2020>>>http://bit.ly/2xHdgE9>>>SLACK|||Hacking Health Camp 2020>>>http://hackinghealth.camp/>>>WEBSITE"
+    "links": "Hacking Health Camp 2020>>>http://bit.ly/2xHdgE9>>>SLACK|||Hacking Health Camp 2020>>>http://hackinghealth.camp/>>>WEBSITE"
   },
   {
     "group name": "GSCN",
     "country": "France",
     "country_code (iso 3661-alpha2)": "FR",
+    "logo": "",
     "description": "GSCN provides logistical and technical IT / cybersecurity support to actors crucial to local life in the event of a crisis.",
     "Topics (separated by |||)": "support|||software|||IT|||cybersecurity",
-    "Links (separated by |||) (Format: text>>>url>>>type) (type SLACK, TELEGRAM, FACEBOOK, TWITTER, INSTAGRAM, TRELLO, WEBSITE)": "GSCN>>>https://discord.gg/zh28VMw>>>DISCORD"
+    "links": "GSCN>>>https://discord.gg/zh28VMw>>>DISCORD"
   },
   {
     "group name": "OpenCOVID19 Initiative",
     "country": "France",
     "country_code (iso 3661-alpha2)": "FR",
+    "logo": "",
     "description": "The goal of this project is to develop an open source methodology to safely test for the presence of SARS-CoV-2 using tools as common as possible.",
     "Topics (separated by |||)": "open source|||medical|||health",
-    "Links (separated by |||) (Format: text>>>url>>>type) (type SLACK, TELEGRAM, FACEBOOK, TWITTER, INSTAGRAM, TRELLO, WEBSITE)": "OpenCOVID19 Initiative>>>https://join.slack.com/t/jogl-covid-19/shared_invite/zt-cbji2hte-8jdoHpJDKg80ZliPVCIjqw>>>SLACK|||OpenCOVID19 Initiative>>>https://app.jogl.io/project/118>>>WEBSITE"
+    "links": "OpenCOVID19 Initiative>>>https://join.slack.com/t/jogl-covid-19/shared_invite/zt-cbji2hte-8jdoHpJDKg80ZliPVCIjqw>>>SLACK|||OpenCOVID19 Initiative>>>https://app.jogl.io/project/118>>>WEBSITE"
   },
   {
     "group name": "Gegen den Virus",
     "country": "Germany",
     "country_code (iso 3661-alpha2)": "DE",
+    "logo": "https://i.imgur.com/4VwzL90.png",
     "description": "So that we all get through the Corona Virus well, we have to help each other. People from risk groups need your help. Here we provide digital aids that bridge the gap between the digital help offers and the mostly analogue needy. This project is part of KrisenKultur.de",
     "Topics (separated by |||)": "digital aid|||help|||neighbor",
-    "Links (separated by |||) (Format: text>>>url>>>type) (type SLACK, TELEGRAM, FACEBOOK, TWITTER, INSTAGRAM, TRELLO, WEBSITE)": "Gegen den Virus>>>https://t.me/gegendenviruschannel>>>TELEGRAM|||Gegen den Virus>>>https://gegen-den-virus.de/>>>WEBSITE"
+    "links": "Gegen den Virus>>>https://t.me/gegendenviruschannel>>>TELEGRAM|||Gegen den Virus>>>https://gegen-den-virus.de/>>>WEBSITE"
   },
   {
     "group name": "WirvsVirus",
     "country": "Germany",
     "country_code (iso 3661-alpha2)": "DE",
+    "logo": "https://i.imgur.com/J6msH0A.jpg",
     "description": "48 hours. Challenges of the federal government and from society. You and theoretically 80 million others. The Covid-19 crisis. Diverse solutions. Be there with your skills when we develop solutions from society for society. Together with the federal government, we are creating the digital participation process in the corona crisis. Everywhere in Germany, individuals are working on solutions. The #WirVsVirus Online Hackathon is the digital space in which we can all develop, test and improve solutions together for emerging challenges.",
     "Topics (separated by |||)": "solution|||collaboration|||software",
-    "Links (separated by |||) (Format: text>>>url>>>type) (type SLACK, TELEGRAM, FACEBOOK, TWITTER, INSTAGRAM, TRELLO, WEBSITE)": "WirvsVirus>>>https://join.slack.com/t/wirvsvirus/invite/enQtMTAxNTcxMzk1NzUyMC03YWZlMDI0YjU4MGRiNzdhZTQ5MmFlZmQxYjAxNTI1Y2M3YWEwZTg5NmE4MjIzMzVkYTNlNzdiOTc1ZDczMjcy?x=x-p1004982374068-1002812127362-1015264087332>>>SLACK|||WirvsVirus>>>https://wirvsvirushackathon.org>>>WEBSITE|||WirvsVirus>>>https://twitter.com/WirvsVirusHack>>>TWITTER"
+    "links": "WirvsVirus>>>https://join.slack.com/t/wirvsvirus/invite/enQtMTAxNTcxMzk1NzUyMC03YWZlMDI0YjU4MGRiNzdhZTQ5MmFlZmQxYjAxNTI1Y2M3YWEwZTg5NmE4MjIzMzVkYTNlNzdiOTc1ZDczMjcy?x=x-p1004982374068-1002812127362-1015264087332>>>SLACK|||WirvsVirus>>>https://wirvsvirushackathon.org>>>WEBSITE|||WirvsVirus>>>https://twitter.com/WirvsVirusHack>>>TWITTER"
   },
   {
     "group name": "Nerds Helfen",
     "country": "Germany",
     "country_code (iso 3661-alpha2)": "DE",
+    "logo": "",
     "description": "Mit diesem Pad sammeln wir IT-Projekte im Zusammenhang mit der Pr�vention, Heilung und Aufkl�rung zum Corona-Virus.",
     "Topics (separated by |||)": "technology|||medical|||help|||collaboration",
-    "Links (separated by |||) (Format: text>>>url>>>type) (type SLACK, TELEGRAM, FACEBOOK, TWITTER, INSTAGRAM, TRELLO, WEBSITE)": "Nerds Helfen>>>https://hackmd.okfn.de/nerds-helfen?view#>>>WEBSITE"
+    "links": "Nerds Helfen>>>https://hackmd.okfn.de/nerds-helfen?view#>>>WEBSITE"
   },
   {
     "group name": "g0vhk Hackathon",
     "country": "Hong Kong",
     "country_code (iso 3661-alpha2)": "HK",
+    "logo": "https://i.imgur.com/r2F9FvG.png",
     "description": "g0vhk Hackathon is a half-day event. Participants from different backgrounds brought their laptops to express their problems they found and wanted to solve within three minutes. After the presentation, they met and met with the participants present and teamed up to solve the problem, and released the results of the operation for several hours before the end of Hackathon. Take mass outsourcing to organize data as an example, first you must define the source and purpose of the data, and then you manually enter the data into an online system (such as Google Spreadsheet), then check the correctness of the input data, and finally post the data to the Internet. Visualize the data. Through g0vhk Hackathon, Activism, Issue Based, and Citizenship can be encouraged.",
     "Topics (separated by |||)": "help|||initiative|||idea|||hackathon|||technology",
-    "Links (separated by |||) (Format: text>>>url>>>type) (type SLACK, TELEGRAM, FACEBOOK, TWITTER, INSTAGRAM, TRELLO, WEBSITE)": "g0vhk Hackathon>>>https://t.me/g0vhk>>>TELEGRAM|||g0vhk Hackathon>>>https://g0vhk.io/>>>WEBSITE|||g0vhk Hackathon>>>https://www.facebook.com/groups/g0vhk/>>>FACEBOOK|||g0vhk Hackathon>>>https://trello.com/b/t5Q99FeA/station-%E5%A4%AA%E7%A9%BA%E7%AB%99>>>TRELLO"
+    "links": "g0vhk Hackathon>>>https://t.me/g0vhk>>>TELEGRAM|||g0vhk Hackathon>>>https://g0vhk.io/>>>WEBSITE|||g0vhk Hackathon>>>https://www.facebook.com/groups/g0vhk/>>>FACEBOOK|||g0vhk Hackathon>>>https://trello.com/b/t5Q99FeA/station-%E5%A4%AA%E7%A9%BA%E7%AB%99>>>TRELLO"
   },
   {
     "group name": "COVID 19 Solution Challenge",
     "country": "India",
     "country_code (iso 3661-alpha2)": "IN",
+    "logo": "https://i.imgur.com/L0uYHJ1.png",
     "description": "Government of India is taking all necessary steps to ensure that we are prepared well to face the challenge and threat posed by the growing pandemic of COVID 19 � the Corona Virus. With active support of the people of India, we have been able to contain the spread of the Virus in our country. The most important factor in preventing the spread of the Virus locally is to empower the citizens with the right information and taking precautions as per the advisories being issued by Ministry of Health & Family Welfare. Further, we are also getting inputs with regard to individuals and companies who have developed technologies and innovative solutions, Bioinformatics, datasets, Apps for diagnosis etc that can be leveraged for strengthening the fight against Corona. In order to involve the community in the fight against the Virus, we would want you to share your solutions to help fight #Coronavirus. Submitted solutions will be evaluated for adoption and those selected will be suitable rewarded.Be a part of the mission against Coronavirus!",
     "Topics (separated by |||)": "information|||help|||solution",
-    "Links (separated by |||) (Format: text>>>url>>>type) (type SLACK, TELEGRAM, FACEBOOK, TWITTER, INSTAGRAM, TRELLO, WEBSITE)": "COVID 19 Solution Challenge>>>https://innovate.mygov.in/covid19/>>>WEBSITE"
+    "links": "COVID 19 Solution Challenge>>>https://innovate.mygov.in/covid19/>>>WEBSITE"
   },
   {
     "group name": "Ecosystem Survival Team - COVID19",
     "country": "Italy",
     "country_code (iso 3661-alpha2)": "IT",
+    "logo": "",
     "description": "For all the European ecosystem builders (incubators, accelerators, networks, communities, ventures�) and others that are interested in the survival of the entire ecosystem. Started by the non-profit Startup Heatmap Europe.",
     "Topics (separated by |||)": "ecosystem|||help|||start up",
-    "Links (separated by |||) (Format: text>>>url>>>type) (type SLACK, TELEGRAM, FACEBOOK, TWITTER, INSTAGRAM, TRELLO, WEBSITE)": "Ecosystem Survival Team - COVID19>>>https://ecosystemsurvivalteam.slack.com/join/shared_invite/zt-csl4w278-YB7r~DJl_GLUhTEEw1Tjjg>>>SLACK"
+    "links": "Ecosystem Survival Team - COVID19>>>https://ecosystemsurvivalteam.slack.com/join/shared_invite/zt-csl4w278-YB7r~DJl_GLUhTEEw1Tjjg>>>SLACK"
   },
   {
     "group name": "HackForce",
     "country": "Latvia",
     "country_code (iso 3661-alpha2)": "LV",
+    "logo": "https://i.imgur.com/9sllRIB.png",
     "description": "Join the #HackForce - a virtual hackathon to solve one of the biggest problems we face in our time. Europe currently fights serious and sudden challenges due to the current coronavirus crisis, which has created various issues. And emergency situations need an emergency response! We invite everyone, not just developers, but experts, entrepreneurs and professionals in every field to contribute their time and skills to tackle the crisis together.",
     "Topics (separated by |||)": "hackathon|||collaboration|||innovation",
-    "Links (separated by |||) (Format: text>>>url>>>type) (type SLACK, TELEGRAM, FACEBOOK, TWITTER, INSTAGRAM, TRELLO, WEBSITE)": "HackForce>>>https://ej.uz/hackforce -> https://hackforceworkspace.slack.com/join/shared_invite/zt-cmjsieqa-ubqEJ8bgEeuN9GaWI4jcjQ>>>SLACK|||HackForce>>>https://startuplatvia.eu/event/hackforce>>>WEBSITE"
+    "links": "HackForce>>>https://ej.uz/hackforce -> https://hackforceworkspace.slack.com/join/shared_invite/zt-cmjsieqa-ubqEJ8bgEeuN9GaWI4jcjQ>>>SLACK|||HackForce>>>https://startuplatvia.eu/event/hackforce>>>WEBSITE"
   },
   {
     "group name": "Hack the Crisis",
     "country": "Lithuania",
     "country_code (iso 3661-alpha2)": "LT",
+    "logo": "https://i.imgur.com/OWsP4qi.png",
     "description": "Inspired by our friends from Estonia & the community of Garage48 �HACK THE CRISIS� is a virtual hackathon organised by volunteers from the Lithuanian government, corporates & startup community.No matter your profession, we invite you to join us � we need help from experts in all fields, entrepreneurs and professionals. Please contribute your time and skills & let�s solve the crisis all together.",
     "Topics (separated by |||)": "collaboration|||help|||solution",
-    "Links (separated by |||) (Format: text>>>url>>>type) (type SLACK, TELEGRAM, FACEBOOK, TWITTER, INSTAGRAM, TRELLO, WEBSITE)": "Hack the Crisis>>>https://hack-the-crisis.slack.com/join/shared_invite/zt-cnrya8c1-pQiVygWQhJMM4_uiz3Ve4g>>>SLACK|||Hack the Crisis>>>https://hackthecrisis.lt/>>>WEBSITE"
+    "links": "Hack the Crisis>>>https://hack-the-crisis.slack.com/join/shared_invite/zt-cnrya8c1-pQiVygWQhJMM4_uiz3Ve4g>>>SLACK|||Hack the Crisis>>>https://hackthecrisis.lt/>>>WEBSITE"
   },
   {
     "group name": "Codeando M�xico",
     "country": "Mexico",
     "country_code (iso 3661-alpha2)": "MX",
+    "logo": "",
     "description": "We started activities, where we joined VerificadoCOVID-19 and frenalacurva.net.Today we will be working on one of the two platforms that seeks to centralize VERIFIED information regarding COVID-19. The platform is based on Discourse.org and we have a fork in our GitHub org that we will start working on. The ideal is for today's late-night to have a running version of our own Discourse.",
     "Topics (separated by |||)": "platform|||solution|||information",
-    "Links (separated by |||) (Format: text>>>url>>>type) (type SLACK, TELEGRAM, FACEBOOK, TWITTER, INSTAGRAM, TRELLO, WEBSITE)": "Codeando Mexico>>>http://slack.codeandomexico.org/>>>SLACK|||Codeando Mexico>>>https://mx.frenalacurva.net/>>>WEBSITE|||Codeando Mexico>>>https://twitter.com/frenalacurvamx/>>>TWITTER|||Codeando Mexico>>>https://www.instagram.com/frenalacurvamx/>>>INSTAGRAM|||Codeando Mexico>>>https://www.facebook.com/frenalacurvamx/>>>FACEBOOK"
+    "links": "Codeando Mexico>>>http://slack.codeandomexico.org/>>>SLACK|||Codeando Mexico>>>https://mx.frenalacurva.net/>>>WEBSITE|||Codeando Mexico>>>https://twitter.com/frenalacurvamx/>>>TWITTER|||Codeando Mexico>>>https://www.instagram.com/frenalacurvamx/>>>INSTAGRAM|||Codeando Mexico>>>https://www.facebook.com/frenalacurvamx/>>>FACEBOOK"
   },
   {
     "group name": "c19md",
     "country": "Moldova",
     "country_code (iso 3661-alpha2)": "MD",
+    "logo": "https://i.imgur.com/5r1Yj6E.png",
     "description": "Join our community and let�s find solutions together for informing, preventing and improving the situation caused by COVID-19, with the help of the modern technology available to us today!",
     "Topics (separated by |||)": "solution|||collaboration|||technology",
-    "Links (separated by |||) (Format: text>>>url>>>type) (type SLACK, TELEGRAM, FACEBOOK, TWITTER, INSTAGRAM, TRELLO, WEBSITE)": "c19md>>>https://join.slack.com/t/c19md/shared_invite/zt-crwaj52o-t7WS8QBy2cM78eYd4fEhxw>>>SLACK|||c19md>>>https://c19.md/about>>>WEBSITE|||c19md>>>https://www.facebook.com/events/550313822279174/>>>FACEBOOK|||c19md>>>https://trello.com/b/5brSlBON/c19md-projects>>>TRELLO"
+    "links": "c19md>>>https://join.slack.com/t/c19md/shared_invite/zt-crwaj52o-t7WS8QBy2cM78eYd4fEhxw>>>SLACK|||c19md>>>https://c19.md/about>>>WEBSITE|||c19md>>>https://www.facebook.com/events/550313822279174/>>>FACEBOOK|||c19md>>>https://trello.com/b/5brSlBON/c19md-projects>>>TRELLO"
   },
   {
     "group name": "Code for NL",
     "country": "Netherlands",
     "country_code (iso 3661-alpha2)": "NL",
+    "logo": "https://i.imgur.com/xDp72nW.png",
     "description": "Join our Slack group, channel #Corona viaalkingmee.codefor.nl These are currently the main activities of people in our network: Translation of StayTheFuckHome.com in Dutch. Auto tweets around corona initiatives via @codefornl Encourage Dutch initiatives to collaborate more, including through our Slack channel. Update and promote coronavirustechhandbook.com. Continued development of a Dutch Corona map. Make contact with international initiatives, including the Code for All network (an umbrella network of organizations comparable to Code for NL). Making foreign civil tech initiatives suitable for the Dutch situation. Overview of Dutch initiatives.",
     "Topics (separated by |||)": "collaboration|||technology|||initiative",
-    "Links (separated by |||) (Format: text>>>url>>>type) (type SLACK, TELEGRAM, FACEBOOK, TWITTER, INSTAGRAM, TRELLO, WEBSITE)": "Code for NL>>>https://praatmee.codefor.nl/>>>SLACK|||Code for NL>>>https://www.codefor.nl/corona/>>>WEBSITE"
+    "links": "Code for NL>>>https://praatmee.codefor.nl/>>>SLACK|||Code for NL>>>https://www.codefor.nl/corona/>>>WEBSITE"
   },
   {
     "group name": "Hack Corona",
     "country": "Netherlands",
     "country_code (iso 3661-alpha2)": "NL",
+    "logo": "https://i.imgur.com/HZ8Hxfg.jpg",
     "description": "Welcome to the online environment for Hack Corona! The problems that have already been reported can be found on our Sparkboard: https://hackcorona.sparkboard.com/ There you will find a detailed description of the problems. Below are links to the team rooms for the different problems so that you can work with a team on one problem. You can sign up for this by clicking on the link. The numbers refer to the corresponding numbers on Sparkboard. #4 Check corona complaints at home #7 Mask shortage #8 Ventilator shortage # 9 Group Training #10 Beautiful end of life #11 Contaminated surfaces #12 Information needs through different channels #13 Prepare #14 Test Hands-Free Patients #15 Corona Science HUB #16 So don't hoard� #17 Human centered business / licensing models for vaccines / medications #22 Relieve caregivers by using main camera #24 Healthy lifestyle for people at hom e#26 Protect Healthcare Providers #28 Awareness and insight virus transfer #29 Data Driven Trace-Back in Early Epidemic #31 Efficient triage process at hospital entrance",
     "Topics (separated by |||)": "information|||help|||solution",
-    "Links (separated by |||) (Format: text>>>url>>>type) (type SLACK, TELEGRAM, FACEBOOK, TWITTER, INSTAGRAM, TRELLO, WEBSITE)": "Hack Corona>>>https://twitter.com/HackingHealthNL>>>TWITTER"
+    "links": "Hack Corona>>>https://twitter.com/HackingHealthNL>>>TWITTER"
   },
   {
     "group name": "2019-nCoV-hackathon",
     "country": "Poland",
     "country_code (iso 3661-alpha2)": "PL",
+    "logo": "https://i.imgur.com/V3tkTBD.jpg",
     "description": "Hi! We can't meet, but we can work together! We organize Hackathon online, which combines ideas and technological solutions that can help in the fight against coronavirus and mitigate the effects of a pandemic.Everyone can join! Not only programmers and people related to IT - we invite doctors, graphic designers, marketers, PR specialists, social activists, local government officials - all who want to work constructively! Join now - #hackthevirus Hackathon is a type of competition for programmers in which participants solve a specific problem (for example, create the right program) in a short time - usually over the weekend. Our hackathon is a bit different - we don't compete, we only cooperate, and we are open to everyone - not just programmers!",
     "Topics (separated by |||)": "hackathon|||technology|||help|||collaboration",
-    "Links (separated by |||) (Format: text>>>url>>>type) (type SLACK, TELEGRAM, FACEBOOK, TWITTER, INSTAGRAM, TRELLO, WEBSITE)": "2019-nCoV-hackathon>>>https://2019-ncov-hackathon.slack.com/join/shared_invite/zt-ckubrfcx-PeBk8OgQuhE7ihNP8omQCg>>>SLACK|||2019-nCoV-hackathon>>>https://www.facebook.com/groups/hackthevirus/>>>FACEBOOK"
+    "links": "2019-nCoV-hackathon>>>https://2019-ncov-hackathon.slack.com/join/shared_invite/zt-ckubrfcx-PeBk8OgQuhE7ihNP8omQCg>>>SLACK|||2019-nCoV-hackathon>>>https://www.facebook.com/groups/hackthevirus/>>>FACEBOOK"
   },
   {
     "group name": "HackCrisis",
     "country": "Poland",
     "country_code (iso 3661-alpha2)": "PL",
+    "logo": "https://i.imgur.com/ikFg0zC.png",
     "description": "Join the first edition of the online HackCrisis hackathon. We invite everyone to collaborate on the execution of anticrisis ideas to help people handle the pandemic aftermath. We defined three main areas that might be challenging: isolation, facts & data and education.",
     "Topics (separated by |||)": "isolation|||facts|||data|||education",
-    "Links (separated by |||) (Format: text>>>url>>>type) (type SLACK, TELEGRAM, FACEBOOK, TWITTER, INSTAGRAM, TRELLO, WEBSITE)": "HackCrisis>>>https://hackcrisis.slack.com/join/shared_invite/zt-clrbb98y-ez_DNEEDMquKyQ6P_1RgMg>>>SLACK|||HackCrisis>>>https://www.hackcrisis.com/>>>WEBSITE|||HackCrisis>>>https://www.facebook.com/hackcrisis/>>>FACEBOOK|||HackCrisis>>>https://twitter.com/HackCrisis>>>TWITTER"
+    "links": "HackCrisis>>>https://hackcrisis.slack.com/join/shared_invite/zt-clrbb98y-ez_DNEEDMquKyQ6P_1RgMg>>>SLACK|||HackCrisis>>>https://www.hackcrisis.com/>>>WEBSITE|||HackCrisis>>>https://www.facebook.com/hackcrisis/>>>FACEBOOK|||HackCrisis>>>https://twitter.com/HackCrisis>>>TWITTER"
   },
   {
     "group name": "HelpfilEngineering",
     "country": "Portugal",
     "country_code (iso 3661-alpha2)": "PT",
+    "logo": "https://i.imgur.com/QlJLJx7.png",
     "description": "COVID-19 is a devastating disease with enormous speed and power. Based on nothing more than its nature, this virus seems intent on reaching every country in the world. Based on nothing more than human goodwill, we've responded with an international effort. We've created Helpful Engineering, a 5,000 strong volunteer organization, with engineers, scientists and doctors around the world. The Helpful Engineering Community is developing simple and effective open-source products and designs to fight COVID-19. These include hardware devices suitable for consumer production and mass manufacturing, as well as important and pragmatic software products and systems. We will continue the search for these projects in subsequent rounds�please continue your important work developing them. We are reviewing the first round of project proposal submissions. We received 24 proposals that have passed an initial quality screen. Both public feedback, and an expert review with administrative involvement, will be used to determine the outcomes. We will provide a detailed report for proposals that make the final selection.",
     "Topics (separated by |||)": "open source|||medical|||health|||engineering",
-    "Links (separated by |||) (Format: text>>>url>>>type) (type SLACK, TELEGRAM, FACEBOOK, TWITTER, INSTAGRAM, TRELLO, WEBSITE)": "HelpfulEngineering>>>https://helpfulengineering.slack.com/join/shared_invite/zt-cuftcntg-BDc~3oBJ7izijjdmZ6CxZg>>>SLACK|||HelpfulEngineering>>>https://www.projectopenair.org/>>>WEBSITE"
+    "links": "HelpfulEngineering>>>https://helpfulengineering.slack.com/join/shared_invite/zt-cuftcntg-BDc~3oBJ7izijjdmZ6CxZg>>>SLACK|||HelpfulEngineering>>>https://www.projectopenair.org/>>>WEBSITE"
   },
   {
     "group name": "HackDay",
     "country": "Romania",
     "country_code (iso 3661-alpha2)": "RO",
+    "logo": "",
     "description": "COVID-19 is a real threat that must be dealt with with the greatest responsibility. We intend to develop vital technical solutions in order to mitigate the effects of the emergency situation caused by COVID-19 and we need your help! Join a completely online Hack Day edition of Code for Romania!You also participate in the change! It is a time when the calm and determination that this community has shown so far are even more important. Join the effort to stop the spread of COVID-19, choosing one of the new projects and working on them from the comfort of your home.",
     "Topics (separated by |||)": "technology|||solution|||collaboration",
-    "Links (separated by |||) (Format: text>>>url>>>type) (type SLACK, TELEGRAM, FACEBOOK, TWITTER, INSTAGRAM, TRELLO, WEBSITE)": "HackDay>>>https://tfsg.code4.ro/ro/hackday/>>>WEBSITE|||HackDay>>>https://www.facebook.com/events/211521076874858/>>>FACEBOOK"
+    "links": "HackDay>>>https://tfsg.code4.ro/ro/hackday/>>>WEBSITE|||HackDay>>>https://www.facebook.com/events/211521076874858/>>>FACEBOOK"
   },
   {
     "group name": "CoronaVirusMakers",
     "country": "Spain",
     "country_code (iso 3661-alpha2)": "ES",
+    "logo": "",
     "description": "Sign up to volunteer here (https://t.me/coronavirus_makers) so we can keep track of who has what skills and direct resources later. In that Telegram group you will find a Google Doc to register. Give us a short \"hello\" and mention your relevant skill set, available tools and look for them in additional groups where you can contribute. If you are a medical professional, contact the organizers. We are seeking input from medical professionals on the best target response areas. Share this form with medical professionals you know.",
     "Topics (separated by |||)": "collaboration|||skill|||help|||technology",
-    "Links (separated by |||) (Format: text>>>url>>>type) (type SLACK, TELEGRAM, FACEBOOK, TWITTER, INSTAGRAM, TRELLO, WEBSITE)": "CoronaVirusMakers>>>https://t.me/coronavirus_makers>>>TELEGRAM|||CoronaVirusMakers>>>https://www.coronavirusmakers.org/>>>WEBSITE"
+    "links": "CoronaVirusMakers>>>https://t.me/coronavirus_makers>>>TELEGRAM|||CoronaVirusMakers>>>https://www.coronavirusmakers.org/>>>WEBSITE"
   },
   {
     "group name": "Oxygen Protofy",
     "country": "Spain",
     "country_code (iso 3661-alpha2)": "ES",
+    "logo": "",
     "description": "OxyGEN is an open hardware project to build an emergency mechanism that automates an AMBU type manual ventilator in extreme shortage situations such as the one caused by coronavirus (COVID-19) in some parts of the world.",
     "Topics (separated by |||)": "medical|||technology|||ventilator",
-    "Links (separated by |||) (Format: text>>>url>>>type) (type SLACK, TELEGRAM, FACEBOOK, TWITTER, INSTAGRAM, TRELLO, WEBSITE)": "Oxygen Protofy>>>https://discord.gg/KvRrupY>>>DISCORD|||Oygen Protofy>>>https://oxygen.protofy.xyz/>>>WEBSITE|||Oxygen Protofy>>>https://www.facebook.com/frenalacurva/>>>FACEBOOK|||Oxygen Protofy>>>https://twitter.com/frenalacurva>>>TWITTER"
+    "links": "Oxygen Protofy>>>https://discord.gg/KvRrupY>>>DISCORD|||Oygen Protofy>>>https://oxygen.protofy.xyz/>>>WEBSITE|||Oxygen Protofy>>>https://www.facebook.com/frenalacurva/>>>FACEBOOK|||Oxygen Protofy>>>https://twitter.com/frenalacurva>>>TWITTER"
   },
   {
     "group name": "Pandemi Hack",
     "country": "Sweden",
     "country_code (iso 3661-alpha2)": "SE",
+    "logo": "",
     "description": "The project started on 2020-03-17 as a collaboration between Region �sterg�tland and Makerspace Link�ping, see https://makerslink.se/pandemihack/ Now we are expanding the project to the whole nation through the cooperation organization Makers of Sweden, which has recently set up this forum. We also extend it to those parts of the population that have not yet found their way into the maker movement and any of the makerspace in the country. We will in the near future move over the info and discussions here. Sub-project 1: Back-up solutions for respiratory and eye / face protection.",
     "Topics (separated by |||)": "collaboration|||solution|||medical|||health",
-    "Links (separated by |||) (Format: text>>>url>>>type) (type SLACK, TELEGRAM, FACEBOOK, TWITTER, INSTAGRAM, TRELLO, WEBSITE)": "Pandemi hack>>>https://forum.makersofsweden.se/>>>WEBSITE|||Pandemi Hack>>>https://makerspace-linkoping.slack.com/>>>SLACK"
+    "links": "Pandemi hack>>>https://forum.makersofsweden.se/>>>WEBSITE|||Pandemi Hack>>>https://makerspace-linkoping.slack.com/>>>SLACK"
   },
   {
     "group name": "g0v.tw",
     "country": "Taiwan",
     "country_code (iso 3661-alpha2)": "TW",
+    "logo": "",
     "description": "g0v.tw is an online community that pushes information transparency, focusing on developing information platform and tools for the citizens to participate in society. Substituting the �o� with �0? in gov, the new �g0v� not only stands for rethinking the role that the government plays from the bottom up, but also represents the world view of 0 and 1 in the digital natives generation. Based on the spirit of open source, g0v cares about freedom of speech and open data, writing code to provide citizens the easy-to-use information service. The transparency of information can help citizens to have a better understanding on how the government works, to understand the issues faster and to avoid media monopoly, so they can monitor the government more efficiently, and become involved in actions and finally deepen the quality of democracy.",
     "Topics (separated by |||)": "open source|||information|||collaboration",
-    "Links (separated by |||) (Format: text>>>url>>>type) (type SLACK, TELEGRAM, FACEBOOK, TWITTER, INSTAGRAM, TRELLO, WEBSITE)": "g0v.tw>>>http://join.g0v.tw/>>>SLACK|||g0v.tw>>>https://g0v.tw/>>>WEBSITE|||g0tv.tw>>>https://www.facebook.com/groups/g0v.general/>>>FACEBOOK"
+    "links": "g0v.tw>>>http://join.g0v.tw/>>>SLACK|||g0v.tw>>>https://g0v.tw/>>>WEBSITE|||g0tv.tw>>>https://www.facebook.com/groups/g0v.general/>>>FACEBOOK"
   },
   {
     "group name": "Dev for Tunisia",
     "country": "Tunisia",
     "country_code (iso 3661-alpha2)": "TN",
+    "logo": "",
     "description": "Crowd-Based Tech & Digital innovationg group working towards socially responsible project ideas to fight the pandamic (and probably general national issues in the future) along with the government. The group also works to connect those who want to volunteer in the above fields with initiatives looking for human resources.",
     "Topics (separated by |||)": "Technology|||digital|||collaboration|||help|||volunteer",
-    "Links (separated by |||) (Format: text>>>url>>>type) (type SLACK, TELEGRAM, FACEBOOK, TWITTER, INSTAGRAM, TRELLO, WEBSITE)": "Dev for Tunisia>>>https://www.facebook.com/groups/DevForTunisia/>>>FACEBOOK"
+    "links": "Dev for Tunisia>>>https://www.facebook.com/groups/DevForTunisia/>>>FACEBOOK"
   },
   {
     "group name": "Makers against Corona",
@@ -317,78 +356,87 @@
     "country_code (iso 3661-alpha2)": "TN",
     "description": "Makers against Corona. Open source medical supplies that could be easily done and used by anyone.",
     "Topics (separated by |||)": "medical|||supply|||technology",
-    "Links (separated by |||) (Format: text>>>url>>>type) (type SLACK, TELEGRAM, FACEBOOK, TWITTER, INSTAGRAM, TRELLO, WEBSITE)": "Makers against Corona>>>https://join.slack.com/t/coronamaker/shared_invite/zt-ctbtpn2t-bLv4U7PUeLIkr9bZQGj9fg>>>SLACK"
+    "links": "Makers against Corona>>>https://join.slack.com/t/coronamaker/shared_invite/zt-ctbtpn2t-bLv4U7PUeLIkr9bZQGj9fg>>>SLACK"
   },
   {
     "group name": "Yes We Breathe \"ENISo\" & \"FMS",
     "country": "Tunisia",
     "country_code (iso 3661-alpha2)": "TN",
+    "logo": "",
     "description": "Yes WE Breathe",
     "Topics (separated by |||)": "medical|||technology|||ventilator",
-    "Links (separated by |||) (Format: text>>>url>>>type) (type SLACK, TELEGRAM, FACEBOOK, TWITTER, INSTAGRAM, TRELLO, WEBSITE)": "Yes We Breathe \"ENISo\" & \"FMS\">>>https://www.facebook.com/groups/197977924766891/>>>FACEBOOK|||Yes We Breathe \"ENISo\" & \"FMS\">>>https://www.facebook.com/groups/211124023294336>>>FACEBOOK"
+    "links": "Yes We Breathe \"ENISo\" & \"FMS\">>>https://www.facebook.com/groups/197977924766891/>>>FACEBOOK|||Yes We Breathe \"ENISo\" & \"FMS\">>>https://www.facebook.com/groups/211124023294336>>>FACEBOOK"
   },
   {
     "group name": "Covid Emergency Response",
     "country": "United Kingdom",
     "country_code (iso 3661-alpha2)": "GB",
+    "logo": "",
     "description": "Welcome to Covid Emergency Response - a community of tech people available to work on products solving the direct and indirect impacts of Covid-19.",
     "Topics (separated by |||)": "technology|||medical|||help|||collaboration",
-    "Links (separated by |||) (Format: text>>>url>>>type) (type SLACK, TELEGRAM, FACEBOOK, TWITTER, INSTAGRAM, TRELLO, WEBSITE)": "Covid Emergency Response>>>https://join.slack.com/t/corona-emergency/shared_invite/zt-cms2o7rm-FtmF~455wnm6ce108Gqggg>>>SLACK|||Covid Emergency Response>>>https://covidmutualaid.org/>>>WEBSITE|||Covid Emergency Response>>>https://www.facebook.com/CovidAidUK/>>>FACEBOOK"
+    "links": "Covid Emergency Response>>>https://join.slack.com/t/corona-emergency/shared_invite/zt-cms2o7rm-FtmF~455wnm6ce108Gqggg>>>SLACK|||Covid Emergency Response>>>https://covidmutualaid.org/>>>WEBSITE|||Covid Emergency Response>>>https://www.facebook.com/CovidAidUK/>>>FACEBOOK"
   },
   {
     "group name": "Hack Quarantine",
     "country": "United Kingdom",
     "country_code (iso 3661-alpha2)": "GB",
+    "logo": "",
     "description": "A fully-online, people-focused hackathon bringing people together to use their skills to help combat the issues the world is facing with the COVID-19 pandemic. By working with medical professionals and industry, we�ll provide the knowledge and tools to empower hackers to work towards around improving health, remote working and helping vulnerable populations.",
     "Topics (separated by |||)": "knowledge|||collaboration|||help|||technology|||medical",
-    "Links (separated by |||) (Format: text>>>url>>>type) (type SLACK, TELEGRAM, FACEBOOK, TWITTER, INSTAGRAM, TRELLO, WEBSITE)": "Hack Quarantine>>>https://discord.hackquarantine.com/>>>DISCORD|||Hack Quarantine>>>https://hackquarantine.com/>>>WEBSITE|||Hack Quarantine>>>https://twitter.com/HackQuarantine>>>TWITTER|||Hack Quarantine>>>https://www.facebook.com/HackQuarantine>>>FACEBOOK|||Hack Quarantine>>>https://www.instagram.com/hackquarantine/>>>INSTAGRAM"
+    "links": "Hack Quarantine>>>https://discord.hackquarantine.com/>>>DISCORD|||Hack Quarantine>>>https://hackquarantine.com/>>>WEBSITE|||Hack Quarantine>>>https://twitter.com/HackQuarantine>>>TWITTER|||Hack Quarantine>>>https://www.facebook.com/HackQuarantine>>>FACEBOOK|||Hack Quarantine>>>https://www.instagram.com/hackquarantine/>>>INSTAGRAM"
   },
   {
     "group name": "Fix the Crisis",
     "country": "Ukraine",
     "country_code (iso 3661-alpha2)": "UA",
+    "logo": "",
     "description": "The world is grappling with the serious challenges caused by the coronavirus. Cities and countries pause. For those who do not want to pack on Mars, we suggest to rally and fix the situation! We urge all those who are indifferent to join in generating and discussing ideas that will help the country recover. The best solutions will be appreciated by company executives, spread the media, be able to embody your neighbors and anyone, and the winners will receive 20,000 Ukrainian Hryvnia (UAH) from our Genesis partners.",
     "Topics (separated by |||)": "ideas|||neighbor|||neighborhood|||help",
-    "Links (separated by |||) (Format: text>>>url>>>type) (type SLACK, TELEGRAM, FACEBOOK, TWITTER, INSTAGRAM, TRELLO, WEBSITE)": "Fix the Crisis>>>https://t.me/fixthecrisis>>>TELEGRAM|||Fix the Crisis>>>https://casers.org/cases/fix-the-crisis>>>WEBSITE|||Fix the Crisis>>>https://www.facebook.com/events/231015604720156/>>>FACEBOOK"
+    "links": "Fix the Crisis>>>https://t.me/fixthecrisis>>>TELEGRAM|||Fix the Crisis>>>https://casers.org/cases/fix-the-crisis>>>WEBSITE|||Fix the Crisis>>>https://www.facebook.com/events/231015604720156/>>>FACEBOOK"
   },
   {
     "group name": "StopCovid UA",
     "country": "Ukraine",
     "country_code (iso 3661-alpha2)": "UA",
+    "logo": "",
     "description": "Welcome to chat #StopCovidUA We are a voluntary team of volunteers who work to reduce the spread of the virus and increase informed behavior among citizens. Information for volunteers.",
     "Topics (separated by |||)": "medical|||help|||spread",
-    "Links (separated by |||) (Format: text>>>url>>>type) (type SLACK, TELEGRAM, FACEBOOK, TWITTER, INSTAGRAM, TRELLO, WEBSITE)": "StopCovid UA>>>https://stopcovid.org.ua/>>>WEBSITE|||StopCovid UA>>>https://t.me/stopcovidua>>>TELEGRAM|||StopCovid UA>>>https://www.instagram.com/stopcovidua/>>>INSTAGRAM|||StopCovid UA>>>https://discord.gg/Vymmzta>>>DISCORD"
+    "links": "StopCovid UA>>>https://stopcovid.org.ua/>>>WEBSITE|||StopCovid UA>>>https://t.me/stopcovidua>>>TELEGRAM|||StopCovid UA>>>https://www.instagram.com/stopcovidua/>>>INSTAGRAM|||StopCovid UA>>>https://discord.gg/Vymmzta>>>DISCORD"
   },
   {
     "group name": "1 Million Ventilators",
     "country": "United States of America",
     "country_code (iso 3661-alpha2)": "US",
+    "logo": "",
     "description": "We need to develop a strategic reserve of 1,000,000+ emergency ventilators ASAP. These don't need to be fancy medical ventilators, they just need to work.In a pandemic, the limited existing ventilator supply and stockpile should be reserved for treating the most critical life-threatening cases.We need to create an emergency ventilator that can be used for millions of minor cases, including patients who require long-term (15-30 day) ventilation on recovery.",
     "Topics (separated by |||)": "medical|||technology|||ventilator|||collaboration",
-    "Links (separated by |||) (Format: text>>>url>>>type) (type SLACK, TELEGRAM, FACEBOOK, TWITTER, INSTAGRAM, TRELLO, WEBSITE)": "1 Million Ventilators>>>https://discord.gg/HUS7VW>>>DISCORD|||1 Million Ventilators>>>https://helpwithcovid.com/projects/13-1-million-ventilators>>>WEBSITE"
+    "links": "1 Million Ventilators>>>https://discord.gg/HUS7VW>>>DISCORD|||1 Million Ventilators>>>https://helpwithcovid.com/projects/13-1-million-ventilators>>>WEBSITE"
   },
   {
     "group name": "CoronaHub",
     "country": "United States of America",
     "country_code (iso 3661-alpha2)": "US",
+    "logo": "",
     "description": "Coronahub is an online community dedicated to confronting the massive worldwide burden caused by the Coronavirus. The community�s job board connects healthcare workers and volunteers with medical providers, while its Slack chat channel allows for the general public to share Coronavirus news and exchange safety advice.",
     "Topics (separated by |||)": "healthcare|||medical|||collaboration|||volunteer",
-    "Links (separated by |||) (Format: text>>>url>>>type) (type SLACK, TELEGRAM, FACEBOOK, TWITTER, INSTAGRAM, TRELLO, WEBSITE)": "CoronaHub>>>https://join.slack.com/t/coronahub/shared_invite/zt-cry7wk1h-GIM~xUJCXLHJ17DUgZ3zkw>>>SLACK|||CoronaHub>>>https://coronahub.co/>>>WEBSITE"
+    "links": "CoronaHub>>>https://join.slack.com/t/coronahub/shared_invite/zt-cry7wk1h-GIM~xUJCXLHJ17DUgZ3zkw>>>SLACK|||CoronaHub>>>https://coronahub.co/>>>WEBSITE"
   },
   {
     "group name": "MutualAidNational",
     "country": "United States of America",
     "country_code (iso 3661-alpha2)": "US",
+    "logo": "",
     "description": "Welcome to the COVID-19 Mutual Aid Coordination Slack.  recent weeks, new mutual aid networks have sprung up around the country. Other older networks have been re-activated, and still more have been around for a long time and never stopped being active. We haven�t seen any mechanism for these networks to communicate directly with one another, so we decided to build one. We know that we have a lot to learn from each other. Our goal is to bring our diverse networks into more effective coordination, for the duration of this crisis and beyond.The hope is that this workspace can be used to share resources, tools, and best practices, to resource, scale, and replicate mutual aid, and to otherwise communicate.",
     "Topics (separated by |||)": "network|||collaboration|||technology|||help|||coordination",
-    "Links (separated by |||) (Format: text>>>url>>>type) (type SLACK, TELEGRAM, FACEBOOK, TWITTER, INSTAGRAM, TRELLO, WEBSITE)": "MutualAidNational>>>https://join.slack.com/t/mutualaidnational/shared_invite/zt-cs6npzra-1~A9RFuKusoN_cb~Bqy8Gg>>>SLACK"
+    "links": "MutualAidNational>>>https://join.slack.com/t/mutualaidnational/shared_invite/zt-cs6npzra-1~A9RFuKusoN_cb~Bqy8Gg>>>SLACK"
   },
   {
     "group name": "NECSI",
     "country": "United States of America",
     "country_code (iso 3661-alpha2)": "US",
+    "logo": "",
     "description": "EndCoronavirus.org (NECSI). endCoronavirus.org is an action network of @NECSI, scientists @Harvard@MITand volunteers. We educate in order to end the outbreak of Coronavirus COVID-19. A group of the New England Complex Systems Institute (NECSI).",
     "Topics (separated by |||)": "science|||medical|||collaboration|||university",
-    "Links (separated by |||) (Format: text>>>url>>>type) (type SLACK, TELEGRAM, FACEBOOK, TWITTER, INSTAGRAM, TRELLO, WEBSITE)": "NECSI>>>https://necsi-edu.slack.com/join/shared_invite/zt-cu5215sg-63h4A7uCy~ehDsrfAIJ~_Q>>>SLACK|||NECSI>>>https://www.endcoronavirus.org/>>>WEBSITE|||NECSI>>>https://twitter.com/endCOVID19>>>TWITTER"
+    "links": "NECSI>>>https://necsi-edu.slack.com/join/shared_invite/zt-cu5215sg-63h4A7uCy~ehDsrfAIJ~_Q>>>SLACK|||NECSI>>>https://www.endcoronavirus.org/>>>WEBSITE|||NECSI>>>https://twitter.com/endCOVID19>>>TWITTER"
   }
 ]
