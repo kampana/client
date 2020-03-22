@@ -1,5 +1,5 @@
 // @flow
-import React, { useState } from 'react';
+import React from 'react';
 import { Menu, Container } from 'semantic-ui-react';
 import { NavLink } from 'react-router-dom';
 
@@ -10,10 +10,10 @@ const StyledHeader = styled.header`
 `;
 
 const Header = () => {
-  const [activeItem, setActiveItem] = useState('home');
-  const handleItemClick = item => {
-    setActiveItem(item);
-  };
+  // const [activeItem, setActiveItem] = useState('home');
+  // const handleItemClick = item => {
+  //   setActiveItem(item);
+  // };
 
   return (
     <StyledHeader>
