@@ -1,6 +1,6 @@
 // @flow
 import React, { useState } from 'react';
-import { Menu, Container, Search, Image } from 'semantic-ui-react';
+import { Menu, Container, Search, Image, Responsive } from 'semantic-ui-react';
 import { NavLink } from 'react-router-dom';
 
 import styled from 'styled-components';
@@ -33,7 +33,7 @@ const Header = () => {
             </NavLink>
           </Menu.Item>
 
-          <Menu.Item position="right">
+          <Responsive as={Menu.Item} minWidth={576} position="right">
             <Search
               loading={isLoading}
               onResultSelect={handleResultSelect}
@@ -42,9 +42,8 @@ const Header = () => {
               // })}
               results={results}
               value={value}
-              // {...this.props}
             />
-          </Menu.Item>
+          </Responsive>
           {/* <Menu.Item
             name="home"
             active={activeItem === 'home'}
