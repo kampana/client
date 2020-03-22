@@ -50,9 +50,7 @@ const Footer = () => {
                 <List.Item>
                   <List.Icon name="github" size="large" />
                   <List.Content verticalAlign="middle">
-                    <a href="https://github.com/covid19-civictechTEAM">
-                      Github
-                    </a>
+                    <a href="https://github.com/civictechhub">Github</a>
                   </List.Content>
                 </List.Item>
                 <List.Item>
