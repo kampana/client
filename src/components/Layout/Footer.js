@@ -1,6 +1,13 @@
 // @flow
 import React from 'react';
-import { Container, Grid, Image, List, Header } from 'semantic-ui-react';
+import {
+  Container,
+  Grid,
+  Image,
+  List,
+  Header,
+  Button,
+} from 'semantic-ui-react';
 
 import styled from 'styled-components/macro';
 
@@ -8,8 +15,10 @@ const logoHackathon = require('../../images/logo-wirvsvirus.png');
 
 const StyledFooter = styled.footer`
   margin: 3rem 0 0;
-  padding: 3rem 0;
-  background: lightgray;
+  padding: 3rem 0 5rem;
+  background: #eeeeee;
+  margin-top: 5rem;
+  /* background: lightgray; */
 `;
 
 const Footer = () => {
@@ -21,7 +30,20 @@ const Footer = () => {
             <Grid.Column>
               <Image src={logoHackathon} style={{ width: 250 }} />
             </Grid.Column>
-            <Grid.Column />
+
+            <Grid.Column>
+              <p>
+                Want to find out more about CivicTechHub´s scope, how we built
+                it and our amazing team? label Visit us on Devpost
+              </p>
+              <Button
+                as="a"
+                href="https://devpost.com/software/internationale-liste-covid-19-communities-hackathons"
+              >
+                Visit us on Devpost
+              </Button>
+            </Grid.Column>
+
             <Grid.Column>
               <Header as="h3">Join us on</Header>
               <List>
