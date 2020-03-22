@@ -58,7 +58,7 @@ const Footer = () => {
                 <List.Item>
                   <List.Icon name="slack" size="large" />
                   <List.Content verticalAlign="middle">
-                    <a href="https://join.slack.com/t/covid-19civictech/shared_invite/zt-cz5jx2np-FweuQCaxTTZQUWW7a1GAyA">
+                    <a href="https://join.slack.com/t/civictechhub/shared_invite/zt-cz5jx2np-FweuQCaxTTZQUWW7a1GAyA">
                       Slack
                     </a>
                   </List.Content>
