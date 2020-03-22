@@ -19,6 +19,8 @@ const LINK_TYPE_ICONS = {
   SLACK: 'slack',
   TWITTER: 'twitter',
   WEBSITE: 'linkify',
+  FACEBOOK: 'facebook',
+  DISCORD: 'discord',
 };
 
 const GroupPage = props => {
