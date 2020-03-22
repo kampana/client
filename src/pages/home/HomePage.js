@@ -9,8 +9,7 @@ const HomePage = () => {
   return (
     <Container>
       <Container>
-        Click to see an <Link to="/country/1">example country page</Link>.
-        <Header as="h1">Countries</Header>
+        <Header as="h1">Choose your country</Header>
         <CountryList />
       </Container>
     </Container>
