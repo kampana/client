@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom';
 
 import styled from 'styled-components';
 
-const logo = require('../../images/logo.jpg');
+const logo = require('../../images/logo.png');
 
 const StyledHeader = styled.header`
   padding: 3rem 0;
@@ -29,7 +29,7 @@ const Header = () => {
         <Menu>
           <Menu.Item header style={{ padding: '0 1rem' }}>
             <NavLink to="/" title={projectName}>
-              <Image src={logo} alt={projectName} style={{ width: 132 }} />
+              <Image src={logo} alt={projectName} style={{ width: 148 }} />
             </NavLink>
           </Menu.Item>
 
