@@ -28,7 +28,12 @@ const Footer = () => {
         <Grid columns={3} divided>
           <Grid.Row>
             <Grid.Column>
-              <Image src={logoHackathon} style={{ width: 250 }} />
+              <a
+                href="https://wirvsvirushackathon.org/"
+                title="#WirVsVirus Hackathon"
+              >
+                <Image src={logoHackathon} style={{ width: 250 }} />
+              </a>
             </Grid.Column>
 
             <Grid.Column>
