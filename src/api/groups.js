@@ -1,12 +1,14 @@
 import http from '../lib/http';
 
-// TODO: replace hardcoded data with API call
-import groups from '../data/groups';
+// TODO: rplace hardcoded data with API call
+// const groups = require('../data/groups.json');
 
-export function fetchGroups(options) {
-  return http.get('groups', options).then(({ data }) => data);
+export function fetchGroups() {
+  return Promise.reject(new Error('Not implemented yet')); // http.get('/groups.json', options).then(({ data }) => data);
 }
 
 export function dummyFetchGroups() {
-  return groups;
+  return http.get('/groups.json').then(({ data }) => {
+    return data;
+  });
 }

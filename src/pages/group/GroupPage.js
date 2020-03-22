@@ -28,9 +28,9 @@ const LINK_TYPE_ICONS = {
 };
 
 const GroupPage = props => {
-  const {
-    match: { params },
-  } = props;
+  // const {
+  //   match: { params },
+  // } = props;
   // const { groupId } = params;
 
   // TODO: maybe move this logic into a new separate GroupLinks component?
