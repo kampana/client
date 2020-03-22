@@ -20,7 +20,7 @@ const Header = () => {
       <Container>
         <Menu>
           <Menu.Item header>
-            <NavLink to="/">Covid-19 CiviTech</NavLink>
+            <NavLink to="/">Covid-19 CIVIC TECH</NavLink>
           </Menu.Item>
           {/* <Menu.Item
             name="home"
