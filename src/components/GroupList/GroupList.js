@@ -51,7 +51,12 @@ const GroupList = (props: Props) => {
             return (
               <Card onClick={() => history.push(`/group/${groupName}`)}>
                 {/* <Link to={`/group/${demoGroupID}`} key={groupName}> */}
-                <Image src={logo} />
+                <Image
+                  src={
+                    logo ||
+                    'https://www.hotukdeals.com/assets/img/profile-placeholder_f56af.png'
+                  }
+                />
                 <Card.Content>
                   <Card.Header>{groupName}</Card.Header>
                   {/* <Card.Meta>{description}</Card.Meta> */}
