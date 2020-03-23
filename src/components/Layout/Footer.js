@@ -57,8 +57,13 @@ const Footer = () => {
                   CivicTechHub indexes and lists initiatives from more than 29
                   countries to create visibility of social projects and
                   activities like Covid-19 crisis-inspired hackathon{' '}
-                  <a href="https://wirvsvirushackathon.org/">#WirVsCorona</a>,
-                  government initiatives and local exchange groups.
+                  <a
+                    href="https://wirvsvirushackathon.org/"
+                    title="#WirVsVirus"
+                  >
+                    #WirVsVirus
+                  </a>
+                  , government initiatives and local exchange groups.
                 </p>
               </Grid.Column>
 
