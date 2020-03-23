@@ -87,9 +87,7 @@ const Footer = () => {
                   <List.Item>
                     <List.Icon name="github" size="large" />
                     <List.Content verticalAlign="middle">
-                      <a href="https://github.com/covid19-civictechTEAM">
-                        Github
-                      </a>
+                      <a href="https://github.com/civictechhub">Github</a>
                     </List.Content>
                   </List.Item>
                   <List.Item>
@@ -111,7 +109,7 @@ const Footer = () => {
                   <List.Item>
                     <List.Icon name="slack" size="large" />
                     <List.Content verticalAlign="middle">
-                      <a href="https://join.slack.com/t/covid-19civictech/shared_invite/zt-cz5jx2np-FweuQCaxTTZQUWW7a1GAyA">
+                      <a href="https://civictechhub.slack.com/join/shared_invite/zt-cz5jx2np-FweuQCaxTTZQUWW7a1GAyA">
                         Slack
                       </a>
                     </List.Content>
