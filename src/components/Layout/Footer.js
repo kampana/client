@@ -25,13 +25,31 @@ const Footer = () => {
   return (
     <StyledFooter>
       <Container>
-        <Grid columns={3} divided>
+        <Grid columns={3} divided padded stackable>
           <Grid.Row>
             <Grid.Column>
-              <Image src={logoHackathon} style={{ width: 250 }} />
+              {/* <Header as="h3">#WirVsVirus</Header> */}
+              <a
+                href="https://wirvsvirushackathon.org/"
+                title="#WirVsVirus Hackathon"
+              >
+                <Image
+                  src={logoHackathon}
+                  style={{ width: 250, marginBottom: '1rem' }}
+                />
+              </a>
+
+              <p>
+                CivicTechHub indexes and lists initiatives from more than 29
+                countries to create visibility of social projects and activities
+                like Covid-19 crisis-inspired hackathon{' '}
+                <a href="https://wirvsvirushackathon.org/">#WirVsCorona</a>,
+                government initiatives and local exchange groups.
+              </p>
             </Grid.Column>
 
             <Grid.Column>
+              <Header as="h3">The project</Header>
               <p>
                 Want to find out more about CivicTechHub´s scope, how we built
                 it and our amazing team? label Visit us on Devpost
@@ -52,6 +70,22 @@ const Footer = () => {
                   <List.Content verticalAlign="middle">
                     <a href="https://github.com/covid19-civictechTEAM">
                       Github
+                    </a>
+                  </List.Content>
+                </List.Item>
+                <List.Item>
+                  <List.Icon name="instagram" size="large" />
+                  <List.Content verticalAlign="middle">
+                    <a href="https://www.instagram.com/civictechhub/">
+                      Instagram
+                    </a>
+                  </List.Content>
+                </List.Item>
+                <List.Item>
+                  <List.Icon name="youtube" size="large" />
+                  <List.Content verticalAlign="middle">
+                    <a href="https://www.youtube.com/channel/UCWjIvbOBLmToD4vrOHED89Q">
+                      YouTube
                     </a>
                   </List.Content>
                 </List.Item>
