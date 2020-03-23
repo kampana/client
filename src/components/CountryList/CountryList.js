@@ -46,7 +46,7 @@ const CountryList = () => {
   }, []);
 
   return (
-    <Card.Group>
+    <Card.Group stackable itemsPerRow="4">
       {Object.values(countries).map(g => {
         const { country, count } = g;
         const name = country.toLowerCase();

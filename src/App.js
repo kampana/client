@@ -1,7 +1,8 @@
 // @flow
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 import 'semantic-ui-css/semantic.min.css';
+import { Container, Header, Button } from 'semantic-ui-react';
 
 import Layout from './components/Layout';
 import HomePage from './pages/home/HomePage';
@@ -20,7 +21,21 @@ function App() {
           <Route exact path="/country/:countryId" component={CountryPage} />
           <Route exact path="/group/:groupId" component={GroupPage} />
           <Route exact path="/wirvsvirushack" component={WirvsvirushackPage} />
-          <Route render={() => <div>404 not found</div>} />
+          <Route
+            render={() => (
+              <Container style={{ padding: '4rem 0' }}>
+                <Header
+                  as="h1"
+                  content="404"
+                  subheader="Sorry, this site could not be found."
+                />
+
+                <Link to="/">
+                  <Button>Back to home</Button>
+                </Link>
+              </Container>
+            )}
+          />
         </Switch>
       </Layout>
     </Router>
