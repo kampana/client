@@ -74,11 +74,12 @@ const GroupPage = props => {
 
       <Image src={group.logo} style={{ marginBottom: '5rem' }} />
 
+      <Header as="h1">{group['group name']}</Header>
+
       <Grid columns={2}>
         <Grid.Row>
           <Grid.Column>
             <Segment>
-              <Header as="h1">{group['group name']}</Header>
               <p>{group.description}</p>
             </Segment>
           </Grid.Column>
