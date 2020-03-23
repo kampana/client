@@ -1,9 +1,12 @@
 // @flow
 import React, { useState } from 'react';
+import _ from 'lodash';
 import { Menu, Container, Search, Image, Responsive } from 'semantic-ui-react';
-import { NavLink } from 'react-router-dom';
-
+import { NavLink, useHistory } from 'react-router-dom';
 import styled from 'styled-components';
+
+import { AppContext } from './Layout';
+import { dummyFetchGroups } from '../../api/groups';
 
 const logo = require('../../images/logo.png');
 
@@ -12,16 +15,41 @@ const StyledHeader = styled.header`
 `;
 
 const Header = () => {
+  const { state, dispatch } = React.useContext(AppContext);
   const [isLoading] = useState(false);
-  const [results] = useState([]);
-  const [value] = useState('');
+  const [results, setResults] = useState([]);
+  const history = useHistory();
   // const [activeItem, setActiveItem] = useState('home');
   // const handleItemClick = item => {
   //   setActiveItem(item);
   // };
 
   const projectName = 'CivicTechHub';
-  const handleResultSelect = () => {};
+
+  const handleSearchChange = e => {
+    const searchTerm = e.target.value;
+    dispatch({
+      type: 'PERFORM_SEARCH',
+      value: searchTerm,
+    });
+    return dummyFetchGroups()
+      .then(result => {
+        const searchResults = result
+          .filter(({ 'group name': name }) => name.includes(searchTerm))
+          .map(r => ({
+            title: r['group name'],
+            // image: r.logo,
+          }));
+        setResults(searchResults);
+      })
+      .catch(reason => {
+        throw reason;
+      });
+  };
+
+  const handleResultSelect = (e, { result: { title } }) => {
+    history.push(`/group/${title}`);
+  };
 
   return (
     <StyledHeader>
@@ -37,11 +65,11 @@ const Header = () => {
             <Search
               loading={isLoading}
               onResultSelect={handleResultSelect}
-              // onSearchChange={_.debounce(this.handleSearchChange, 500, {
-              //   leading: true,
-              // })}
+              onSearchChange={_.debounce(handleSearchChange, 300, {
+                leading: true,
+              })}
               results={results}
-              value={value}
+              value={state.globalSearchValue}
             />
           </Responsive>
           {/* <Menu.Item

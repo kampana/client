@@ -29,7 +29,7 @@ const PrimaryFooter = styled.div`
 `;
 
 const SecondaryFooter = styled.div`
-  padding: 1rem 0 1rem;
+  padding: 1.5rem 0 1.5rem;
   color: lightgray;
   background: #303030;
 `;
