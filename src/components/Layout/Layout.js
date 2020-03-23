@@ -8,9 +8,21 @@ import Header from './Header';
 import Footer from './Footer';
 
 const GlobalStyle = createGlobalStyle`
+  body {
+    color: #3a3a3a;
+  }
+
   h1 {
     &.ui.header {
       margin-bottom: 2rem; 
+    }
+  }
+
+  a {
+    color: #A13262;
+
+    &:hover {
+      color: #A13262;
     }
   }
 `;
