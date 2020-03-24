@@ -11,11 +11,19 @@ export const handleSearchChange = (dispatch, searchValue) => {
     dummyFetchGroups()
       .then(result => {
         const searchResults = result
-          .filter(({ 'group name': name }) =>
-            name.toLowerCase().includes(searchTerm),
+          .filter(
+            ({
+              'group name': name,
+              'Topics (separated by |||)': topicString,
+            }) => {
+              const matchesTopics = topicString.includes(searchTerm);
+
+              return name.toLowerCase().includes(searchTerm) || matchesTopics;
+            },
           )
           .map(r => ({
             title: r['group name'],
+            description: r['Topics (separated by |||)'].split('|||').join(', '),
             // image: r.logo,
           }));
         dispatch({ type: SET_SEARCH_RESULTS, value: searchResults });

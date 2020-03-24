@@ -46,7 +46,7 @@ const Header = () => {
 
           <Responsive as={Menu.Item} minWidth={576} position="right">
             <Search
-              placeholder="Search"
+              placeholder="Search name or topic"
               loading={isLoading}
               onResultSelect={handleResultSelect}
               onSearchChange={_.debounce(

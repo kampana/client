@@ -18,7 +18,7 @@ const CountryList = () => {
         setCountries(response._embedded.country);
         // setIsLoading(false);
       } catch (error) {
-        console.log(error);
+        // console.log(error);
       }
     }
     fetchData();
