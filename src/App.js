@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 import 'semantic-ui-css/semantic.min.css';
 import { Container, Header, Button } from 'semantic-ui-react';
 
+import ScrollToTop from './components/ScrollToTop';
 import Layout from './components/Layout';
 import HomePage from './pages/home/HomePage';
 import CountryPage from './pages/country/CountryPage';
@@ -15,6 +16,7 @@ import WirvsvirushackPage from './pages/wirvsvirushack/WirvsvirushackPage';
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <Layout>
         <Switch>
           <Route exact path="/" component={HomePage} />
