@@ -7,6 +7,7 @@ import {
   Segment,
   Button,
   Image,
+  Label,
   Grid,
   Header,
   Dimmer,
@@ -58,6 +59,7 @@ const GroupPage = props => {
     );
   }
   const groupLinks = group.links.split('|||');
+  const topics = group['Topics (separated by |||)'].split('|||');
 
   return (
     <Container>
@@ -78,7 +80,7 @@ const GroupPage = props => {
 
       <Header as="h1">{group['group name']}</Header>
 
-      <Grid columns={2}>
+      <Grid columns={2} stackable>
         <Grid.Row>
           <Grid.Column>
             <Segment>
@@ -87,6 +89,13 @@ const GroupPage = props => {
           </Grid.Column>
 
           <Grid.Column>
+            <Segment>
+              <Header as="h2">Topics</Header>
+              {topics.map(topic => {
+                return <Label>{topic}</Label>;
+              })}
+            </Segment>
+
             <Segment>
               <Header as="h2">Resources & Links</Header>
               <List>

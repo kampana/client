@@ -27,19 +27,29 @@ const Header = () => {
   const projectName = 'CivicTechHub';
 
   const handleSearchChange = e => {
-    const searchTerm = e.target.value.toLowerCase();
+    const searchTermOriginal = e.target.value;
+    const searchTerm = searchTermOriginal.toLowerCase();
+
     dispatch({
       type: 'PERFORM_SEARCH',
-      value: searchTerm,
+      value: searchTermOriginal,
     });
     return dummyFetchGroups()
       .then(result => {
         const searchResults = result
-          .filter(({ 'group name': name }) =>
-            name.toLowerCase().includes(searchTerm)
+          .filter(
+            ({
+              'group name': name,
+              'Topics (separated by |||)': topicString,
+            }) => {
+              const matchesTopics = topicString.includes(searchTerm);
+
+              return name.toLowerCase().includes(searchTerm) || matchesTopics;
+            }
           )
           .map(r => ({
             title: r['group name'],
+            description: r['Topics (separated by |||)'].split('|||').join(', '),
             // image: r.logo,
           }));
         setResults(searchResults);
@@ -65,7 +75,7 @@ const Header = () => {
 
           <Responsive as={Menu.Item} minWidth={576} position="right">
             <Search
-              placeholder="Search"
+              placeholder="Search name or topic"
               loading={isLoading}
               onResultSelect={handleResultSelect}
               onSearchChange={_.debounce(handleSearchChange, 300, {
