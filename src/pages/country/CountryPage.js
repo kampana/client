@@ -14,7 +14,7 @@ const CountryPage = props => {
   const [groups, setGroups] = useState([]);
   const countryName = groups.length
     ? groups.find(
-        c => countryId === c['country_code (iso 3661-alpha2)'].toLowerCase()
+        c => countryId === c['country_code (iso 3661-alpha2)'].toLowerCase(),
       ).country
     : null;
 

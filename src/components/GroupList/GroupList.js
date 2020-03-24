@@ -41,8 +41,9 @@ const GroupList = (props: Props) => {
         const allGroups = await dummyFetchGroups();
         setGroups(
           allGroups.filter(
-            g => countryId === g['country_code (iso 3661-alpha2)'].toLowerCase()
-          )
+            g =>
+              countryId === g['country_code (iso 3661-alpha2)'].toLowerCase(),
+          ),
         );
         setLoading(false);
       } catch (error) {

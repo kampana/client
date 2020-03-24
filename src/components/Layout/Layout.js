@@ -1,23 +1,45 @@
 // @flow
-import React, { useReducer } from 'react';
+import React from 'react';
 // import logo from '../../images/logo.svg';
 import { withRouter } from 'react-router-dom';
 import styled, { createGlobalStyle } from 'styled-components';
 
 import Header from './Header';
 import Footer from './Footer';
+import { StateProvider } from '../../state';
+import {
+  SET_SEARCH_VALUE,
+  SET_SEARCH_RESULTS,
+  FETCH_COUNTRIES,
+} from '../../actions/types';
 
-export const AppContext = React.createContext();
 const initialState = {
-  globalSearchValue: '',
+  search: {
+    searchValue: '',
+    searchResults: null,
+  },
+  countries: {
+    countryList: null,
+    totalCountries: null,
+  },
 };
 
 const reducer = (state, action) => {
   switch (action.type) {
-    case 'PERFORM_SEARCH':
+    case SET_SEARCH_VALUE:
       return {
         ...state,
-        globalSearchValue: action.value,
+        search: { ...state.search, searchValue: action.value },
+      };
+    case SET_SEARCH_RESULTS:
+      return {
+        ...state,
+        search: { ...state.search, searchResults: action.value },
+      };
+    case FETCH_COUNTRIES:
+      return {
+        ...state,
+        countries: action.value,
       };
     default:
       return state;
@@ -56,24 +78,18 @@ const App = styled.div`
 
 const Layout = props => {
   const { children } = props;
-  const [state, dispatch] = useReducer(reducer, initialState);
 
   return (
     <App>
       <GlobalStyle />
 
-      <AppContext.Provider
-        value={{
-          state,
-          dispatch,
-        }}
-      >
+      <StateProvider initialState={initialState} reducer={reducer}>
         {props.location.pathname !== '/wirvsvirushack' && <Header />}
 
         <main>{children}</main>
 
         {props.location.pathname !== '/wirvsvirushack' && <Footer />}
-      </AppContext.Provider>
+      </StateProvider>
     </App>
   );
 };

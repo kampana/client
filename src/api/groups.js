@@ -1,14 +1,27 @@
+import axios from 'axios';
 import http from '../lib/http';
 
-// TODO: rplace hardcoded data with API call
-// const groups = require('../data/groups.json');
+export function fetchGroups(
+  countryId, // Leave empty for all countries
+  page, // Leave empty to get all items
+  pageSize, // Leave empty to get all items
+  options,
+) {
+  return http
+    .get('group', { query: { countryId, page, pageSize }, ...options })
+    .then(({ data }) => data);
+}
 
-export function fetchGroups() {
-  return Promise.reject(new Error('Not implemented yet')); // http.get('/groups.json', options).then(({ data }) => data);
+export function fetchGroup(groupId, options) {
+  return http.get(`group/${groupId}`, options).then(({ data }) => data);
 }
 
 export function dummyFetchGroups() {
-  return http.get('/groups.json').then(({ data }) => {
-    return data;
+  axios.create({
+    baseURL: '/',
+    headers: {
+      'Content-Type': 'application/json',
+    },
   });
+  return axios.get('./groups.json').then(({ data }) => data);
 }
