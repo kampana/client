@@ -24,6 +24,7 @@ const LINK_TYPE_ICONS = {
   FACEBOOK: 'facebook',
   DISCORD: 'discord',
   TELEGRAM: 'telegram plane',
+  INSTAGRAM: 'instagram',
 };
 
 const GroupPage = props => {
