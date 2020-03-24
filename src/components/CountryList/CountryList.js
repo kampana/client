@@ -27,7 +27,7 @@ const CountryList = () => {
   return (
     <Card.Group stackable itemsPerRow="4">
       {Object.values(countries).map(country => {
-        const { id, name, iso3166Code } = country;
+        const { id, name, iso3166Code, countGroups } = country;
 
         return (
           <Card onClick={() => history.push(`/country/${id}`)} key={id}>
@@ -44,9 +44,9 @@ const CountryList = () => {
 
               {/* <Item.Description>Find groups in {country}.</Item.Description> */}
 
-              {/* <Card.Meta>
-                {count} {count === 1 ? 'group' : 'groups'}
-              </Card.Meta> */}
+              <Card.Meta>
+                {countGroups} {countGroups === 1 ? 'group' : 'groups'}
+              </Card.Meta>
             </Card.Content>
           </Card>
         );
