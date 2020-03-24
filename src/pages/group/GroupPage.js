@@ -23,6 +23,7 @@ const LINK_TYPE_ICONS = {
   WEBSITE: 'linkify',
   FACEBOOK: 'facebook',
   DISCORD: 'discord',
+  TELEGRAM: 'telegram plane',
 };
 
 const GroupPage = props => {
