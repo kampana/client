@@ -1,3 +1,4 @@
+import axios from 'axios';
 import http from '../lib/http';
 
 export function fetchGroups(
@@ -13,4 +14,14 @@ export function fetchGroups(
 
 export function fetchGroup(groupId, options) {
   return http.get(`group/${groupId}`, options).then(({ data }) => data);
+}
+
+export function dummyFetchGroups() {
+  axios.create({
+    baseURL: '/',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  });
+  return axios.get('./groups.json').then(({ data }) => data);
 }

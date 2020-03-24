@@ -91,7 +91,7 @@ const GroupPage = props => {
               <List>
                 {groupLinks.map(groupLink => {
                   const [linkDescription, linkUrl, linkType] = groupLink.split(
-                    '>>>'
+                    '>>>',
                   );
 
                   return (

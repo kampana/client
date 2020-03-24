@@ -5,8 +5,8 @@ import { Menu, Container, Search, Image, Responsive } from 'semantic-ui-react';
 import { NavLink, useHistory } from 'react-router-dom';
 import styled from 'styled-components';
 
-import { AppContext } from './Layout';
-import { dummyFetchGroups } from '../../api/groups';
+import { useStateContext } from '../../state';
+import { handleSearchChange } from '../../actions/dispatchers';
 
 const logo = require('../../images/logo.png');
 
@@ -15,9 +15,13 @@ const StyledHeader = styled.header`
 `;
 
 const Header = () => {
-  const { state, dispatch } = React.useContext(AppContext);
+  const [
+    {
+      search: { searchValue, searchResults },
+    },
+    dispatch,
+  ] = useStateContext();
   const [isLoading] = useState(false);
-  const [results, setResults] = useState([]);
   const history = useHistory();
   // const [activeItem, setActiveItem] = useState('home');
   // const handleItemClick = item => {
@@ -25,29 +29,6 @@ const Header = () => {
   // };
 
   const projectName = 'CivicTechHub';
-
-  const handleSearchChange = e => {
-    const searchTerm = e.target.value.toLowerCase();
-    dispatch({
-      type: 'PERFORM_SEARCH',
-      value: searchTerm,
-    });
-    return dummyFetchGroups()
-      .then(result => {
-        const searchResults = result
-          .filter(({ 'group name': name }) =>
-            name.toLowerCase().includes(searchTerm)
-          )
-          .map(r => ({
-            title: r['group name'],
-            // image: r.logo,
-          }));
-        setResults(searchResults);
-      })
-      .catch(reason => {
-        throw reason;
-      });
-  };
 
   const handleResultSelect = (e, { result: { title } }) => {
     history.push(`/group/${title}`);
@@ -68,11 +49,15 @@ const Header = () => {
               placeholder="Search"
               loading={isLoading}
               onResultSelect={handleResultSelect}
-              onSearchChange={_.debounce(handleSearchChange, 300, {
-                leading: true,
-              })}
-              results={results}
-              value={state.globalSearchValue}
+              onSearchChange={_.debounce(
+                e => handleSearchChange(dispatch, e.target.value),
+                300,
+                {
+                  leading: true,
+                },
+              )}
+              results={searchResults}
+              value={searchValue}
             />
           </Responsive>
           {/* <Menu.Item
