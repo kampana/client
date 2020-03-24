@@ -115,6 +115,12 @@ const Footer = () => {
                     </List.Content>
                   </List.Item>
                   <List.Item>
+                    <List.Icon name="twitter" size="large" />
+                    <List.Content verticalAlign="middle">
+                      <a href="https://twitter.com/civictechhub">Twitter</a>
+                    </List.Content>
+                  </List.Item>
+                  <List.Item>
                     <List.Icon name="globe" size="large" />
                     <List.Content verticalAlign="middle">
                       <a href="https://devpost.com/software/internationale-liste-covid-19-communities-hackathons">
