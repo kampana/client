@@ -39,7 +39,7 @@ const CountryList = () => {
         setCountries(getUniqueCountries(groups));
         // setIsLoading(false);
       } catch (error) {
-        console.log(error);
+        // console.log(error);
       }
     }
     fetchData();
