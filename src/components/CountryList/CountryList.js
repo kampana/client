@@ -9,7 +9,7 @@ const CountryList = ({ countryList, handleCountryClicked }) => {
         const { id, name, iso3166Code, countGroups } = country;
 
         return (
-          <Card onClick={() => handleCountryClicked(id)} key={id}>
+          <Card onClick={() => handleCountryClicked(id, name)} key={id}>
             {/* <Item.Image>
 
                 </Item.Image> */}

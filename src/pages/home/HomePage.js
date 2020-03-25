@@ -18,13 +18,13 @@ const HomePage = () => {
 
   const history = useHistory();
 
-  const handleCountryClicked = countryId => {
-    history.push(`/country/${countryId}`);
-  };
-
   useEffect(() => {
     if (!countryList) fetchCountries(dispatch);
   }, []);
+
+  const handleCountryClicked = (countryId, countryName) => {
+    history.push(`/country/${countryId}?name=${countryName}`);
+  };
 
   return (
     <Container>
@@ -34,7 +34,7 @@ const HomePage = () => {
           <CountryList
             countryList={countryList}
             handleCountryClicked={handleCountryClicked}
-          />{' '}
+          />
         </>
       ) : (
         <Loader active inline="centered">

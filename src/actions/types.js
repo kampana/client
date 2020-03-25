@@ -3,3 +3,6 @@ export const SET_SEARCH_VALUE = 'SET_SEARCH_VALUE';
 export const SET_SEARCH_RESULTS = 'SET_SEARCH_RESULTS';
 /* Countries */
 export const FETCH_COUNTRIES = 'FETCH_COUNTRIES';
+export const FETCH_COUNTRY_BY_ID = 'FETCH_COUNTRY_BY_ID';
+/* Groups */
+export const FETCH_GROUPS_BY_COUNTRY = 'FETCH_GROUPS_BY_COUNTRY';
