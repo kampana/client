@@ -1,37 +1,62 @@
 // @flow
-import React, { useEffect, useState } from 'react';
-import { Container, Button, Icon, Segment, Header } from 'semantic-ui-react';
-import { Link } from 'react-router-dom';
-
-import { dummyFetchGroups } from '../../api/groups';
+import React, { useState, useEffect } from 'react';
+import _ from 'lodash';
+import { useHistory, Link } from 'react-router-dom';
+import {
+  Container,
+  Button,
+  Icon,
+  Segment,
+  Header,
+  Loader,
+} from 'semantic-ui-react';
 import GroupList from '../../components/GroupList/GroupList';
+import {
+  fetchCountryById,
+  fetchGroupsByCountry,
+} from '../../actions/dispatchers';
+import { useStateContext } from '../../state';
+import useQuery from '../../lib/useQuery';
 
 const CountryPage = props => {
   const {
     match: { params },
   } = props;
   const { countryId } = params;
-  const [groups, setGroups] = useState([]);
-  const countryName = groups.length
-    ? groups.find(
-        c => countryId === c['country_code (iso 3661-alpha2)'].toLowerCase(),
-      ).country
-    : null;
+  const query = useQuery();
+  const name = query.get('name');
+  const [isFetchingGroups, setIsFetchingGroups] = useState(false);
+
+  const [
+    {
+      countries: { activeCountry },
+      groups: { groupList, totalGroups },
+    },
+    dispatch,
+  ] = useStateContext();
+  const history = useHistory();
 
   useEffect(() => {
-    async function fetchData() {
+    if (!name) fetchCountryById(dispatch, countryId);
+    async function fetchGroups() {
       try {
-        const allGroups = await dummyFetchGroups();
-        setGroups(allGroups);
-        // setIsLoading(false);
+        if (!groupList || !groupList[countryId]) {
+          setIsFetchingGroups(true);
+          await fetchGroupsByCountry(dispatch, countryId);
+          setIsFetchingGroups(false);
+        }
       } catch (error) {
-        console.log(error);
+        setIsFetchingGroups(false);
       }
     }
-    fetchData();
-  }, []);
+    fetchGroups();
+  }, [countryId]);
 
-  // console.log('country id: ', params.countryId);
+  const handleGroupClicked = groupName => {
+    history.push(`/group/${groupName}`);
+  };
+
+  const countryName = name || (activeCountry && activeCountry.name);
 
   return (
     <Container>
@@ -43,11 +68,25 @@ const CountryPage = props => {
           </Button>
         </Link>
 
-        <Header as="h1">{countryName}</Header>
+        <Header as="h1">{countryName || <Loader active inline />}</Header>
       </Segment>
 
-      {/* Click to see an <Link to="/group/1">example detail page</Link>. */}
-      <GroupList countryId={countryId} />
+      {isFetchingGroups ? (
+        <Loader active inline="centered">
+          Loading our list of groups for you...
+        </Loader>
+      ) : (
+        <>
+          {_.isEmpty(groupList) ? (
+            <Header as="h2">There are no groups for this country.</Header>
+          ) : (
+            <GroupList
+              groupList={groupList}
+              handleGroupClicked={handleGroupClicked}
+            />
+          )}
+        </>
+      )}
     </Container>
   );
 };

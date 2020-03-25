@@ -1,12 +1,9 @@
 // @flow
-import React, { useState } from 'react';
-import _ from 'lodash';
-import { Menu, Container, Search, Image, Responsive } from 'semantic-ui-react';
-import { NavLink, useHistory } from 'react-router-dom';
+import React from 'react';
+import { Menu, Container, Image } from 'semantic-ui-react';
+import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
-
-import { useStateContext } from '../../state';
-import { handleSearchChange } from '../../actions/dispatchers';
+import Search from '../Search/Search';
 
 const logo = require('../../images/logo.png');
 
@@ -15,24 +12,12 @@ const StyledHeader = styled.header`
 `;
 
 const Header = () => {
-  const [
-    {
-      search: { searchValue, searchResults },
-    },
-    dispatch,
-  ] = useStateContext();
-  const [isLoading] = useState(false);
-  const history = useHistory();
   // const [activeItem, setActiveItem] = useState('home');
   // const handleItemClick = item => {
   //   setActiveItem(item);
   // };
 
   const projectName = 'CivicTechHub';
-
-  const handleResultSelect = (e, { result: { title } }) => {
-    history.push(`/group/${title}`);
-  };
 
   return (
     <StyledHeader>
@@ -44,22 +29,7 @@ const Header = () => {
             </NavLink>
           </Menu.Item>
 
-          <Responsive as={Menu.Item} minWidth={576} position="right">
-            <Search
-              placeholder="Search name or topic"
-              loading={isLoading}
-              onResultSelect={handleResultSelect}
-              onSearchChange={_.debounce(
-                e => handleSearchChange(dispatch, e.target.value),
-                300,
-                {
-                  leading: true,
-                },
-              )}
-              results={searchResults}
-              value={searchValue}
-            />
-          </Responsive>
+          <Search />
           {/* <Menu.Item
             name="home"
             active={activeItem === 'home'}

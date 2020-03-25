@@ -10,12 +10,12 @@ import {
   Label,
   Grid,
   Header,
-  Dimmer,
   Loader,
 } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 
-import { dummyFetchGroups } from '../../api/groups';
+import { useStateContext } from '../../state';
+import { fetchGroupById } from '../../actions/dispatchers';
 
 const LINK_TYPE_ICONS = {
   // TODO: add all possible link type icons
@@ -33,94 +33,105 @@ const GroupPage = props => {
     match: { params },
   } = props;
   const { groupId } = params;
-  const [group, setGroup] = useState([]);
-  const [loading, setLoading] = useState(true);
+
+  const [
+    {
+      groups: { groupList },
+    },
+    dispatch,
+  ] = useStateContext();
+  const [isFetchingGroup, setIsFetchingGroup] = useState(false);
 
   useEffect(() => {
-    async function fetchData() {
+    async function fetchGroup() {
       try {
-        setLoading(true);
-        const allGroups = await dummyFetchGroups();
-        setGroup(allGroups.find(g => g['group name'] === groupId));
-        setLoading(false);
+        setIsFetchingGroup(true);
+        await fetchGroupById(dispatch, groupId);
+        setIsFetchingGroup(false);
       } catch (error) {
-        setLoading(false);
+        setIsFetchingGroup(false);
         // console.log(error);
       }
     }
-    fetchData();
+    fetchGroup();
   }, [groupId]);
 
-  if (loading) {
-    return (
-      <Dimmer>
-        <Loader />
-      </Dimmer>
-    );
-  }
-  const groupLinks = group.links.split('|||');
-  const topics = group['Topics (separated by |||)'].split('|||');
+  const group = groupList && groupList.find(g => g.id === groupId);
 
   return (
     <Container>
       <Segment basic style={{ paddingLeft: '0', paddingRight: '0' }}>
         <Link
-          to={`/country/${group[
-            'country_code (iso 3661-alpha2)'
-          ].toLowerCase()}`}
+          to={
+            group
+              ? `/country/${group._embedded.country.id}?name=${group._embedded.country.name}`
+              : '/'
+          }
         >
           <Button>
             <Icon name="arrow left" />
-            {group.country}
+            {group ? group._embedded.country.name : 'Home'}
           </Button>
         </Link>
       </Segment>
 
-      <Image src={group.logo} style={{ marginBottom: '5rem' }} />
+      {isFetchingGroup ? (
+        <Loader active inline="centered">
+          Loading the group for you...
+        </Loader>
+      ) : (
+        <>
+          {group ? (
+            <>
+              <Image src={group.logo} style={{ marginBottom: '5rem' }} />
 
-      <Header as="h1">{group['group name']}</Header>
+              <Header as="h1">{group.name}</Header>
 
-      <Grid columns={2} stackable>
-        <Grid.Row>
-          <Grid.Column>
-            <Segment>
-              <p>{group.description}</p>
-            </Segment>
-          </Grid.Column>
+              <Grid columns={2} stackable>
+                <Grid.Row>
+                  <Grid.Column>
+                    <Segment>
+                      <p>{group.description}</p>
+                    </Segment>
+                  </Grid.Column>
 
-          <Grid.Column>
-            <Segment>
-              <Header as="h2">Topics</Header>
-              {topics.map(topic => {
-                return <Label>{topic}</Label>;
-              })}
-            </Segment>
+                  <Grid.Column>
+                    <Segment>
+                      <Header as="h2">Topics</Header>
+                      {group.topics.map(topic => {
+                        return <Label>{topic.topic}</Label>;
+                      })}
+                    </Segment>
 
-            <Segment>
-              <Header as="h2">Resources & Links</Header>
-              <List>
-                {groupLinks.map(groupLink => {
-                  const [linkDescription, linkUrl, linkType] = groupLink.split(
-                    '>>>',
-                  );
-
-                  return (
-                    <List.Item>
-                      <List.Icon
-                        name={LINK_TYPE_ICONS[linkType]}
-                        size="large"
-                      />
-                      <List.Content verticalAlign="middle">
-                        <a href={linkUrl}>{linkDescription}</a>
-                      </List.Content>
-                    </List.Item>
-                  );
-                })}
-              </List>
-            </Segment>
-          </Grid.Column>
-        </Grid.Row>
-      </Grid>
+                    <Segment>
+                      <Header as="h2">Resources & Links</Header>
+                      <List>
+                        {group.serviceLinks.map(serviceLink => {
+                          return (
+                            <List.Item>
+                              <List.Icon
+                                name={LINK_TYPE_ICONS[serviceLink.type]}
+                                size="large"
+                              />
+                              <List.Content verticalAlign="middle">
+                                <a href={serviceLink.url}>{serviceLink.text}</a>
+                              </List.Content>
+                            </List.Item>
+                          );
+                        })}
+                      </List>
+                    </Segment>
+                  </Grid.Column>
+                </Grid.Row>
+              </Grid>
+            </>
+          ) : (
+            <Header as="h2">
+              We encountered an issue trying to fetch the group!
+            </Header>
+          )}
+        </>
+      )}
     </Container>
   );
 };
