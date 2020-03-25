@@ -99,7 +99,7 @@ const GroupPage = props => {
                     <Segment>
                       <Header as="h2">Topics</Header>
                       {group.topics.map(topic => {
-                        return <Label>{topic.topic}</Label>;
+                        return <Label>{topic.name}</Label>;
                       })}
                     </Segment>
 
