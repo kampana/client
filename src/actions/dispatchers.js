@@ -4,8 +4,9 @@ import {
   FETCH_COUNTRIES,
   FETCH_COUNTRY_BY_ID,
   FETCH_GROUPS_BY_COUNTRY,
+  FETCH_GROUP_BY_ID,
 } from './types';
-import { dummyFetchGroups, _fetchGroups } from '../api/groups';
+import { dummyFetchGroups, _fetchGroups, _fetchGroup } from '../api/groups';
 import { _fetchCountries, _fetchCountry } from '../api/countries';
 
 // TODO: implement error handling 'redux promise middleware' style
@@ -75,4 +76,9 @@ export const fetchGroupsByCountry = async (dispatch, countryId) => {
     type: FETCH_GROUPS_BY_COUNTRY,
     value: { groupList, totalGroups },
   });
+};
+
+export const fetchGroupById = async (dispatch, groupId) => {
+  const group = await _fetchGroup(groupId);
+  dispatch({ type: FETCH_GROUP_BY_ID, value: [group] });
 };

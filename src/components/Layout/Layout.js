@@ -14,6 +14,7 @@ import {
   FETCH_COUNTRIES,
   FETCH_COUNTRY_BY_ID,
   FETCH_GROUPS_BY_COUNTRY,
+  FETCH_GROUP_BY_ID,
 } from '../../actions/types';
 
 const initialState = {
@@ -28,7 +29,7 @@ const initialState = {
   },
   groups: {
     activeGroup: null,
-    groupList: null,
+    groupList: [],
     totalGroups: null,
   },
 };
@@ -58,6 +59,14 @@ const reducer = (state, action) => {
       };
     case FETCH_GROUPS_BY_COUNTRY:
       return { ...state, groups: _.merge(state.groups, action.value) };
+    case FETCH_GROUP_BY_ID:
+      return {
+        ...state,
+        groups: {
+          ...state.groups,
+          groupList: _.merge(state.groups.groupList, action.value),
+        },
+      };
     default:
       return state;
   }

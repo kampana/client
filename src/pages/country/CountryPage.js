@@ -38,13 +38,17 @@ const CountryPage = props => {
 
   useEffect(() => {
     if (!name) fetchCountryById(dispatch, countryId);
-    const fetchGroups = async () => {
-      if (!groupList || !groupList[countryId]) {
-        setIsFetchingGroups(true);
-        await fetchGroupsByCountry(dispatch, countryId);
+    async function fetchGroups() {
+      try {
+        if (!groupList || !groupList[countryId]) {
+          setIsFetchingGroups(true);
+          await fetchGroupsByCountry(dispatch, countryId);
+          setIsFetchingGroups(false);
+        }
+      } catch (error) {
         setIsFetchingGroups(false);
       }
-    };
+    }
     fetchGroups();
   }, [countryId]);
 
@@ -74,7 +78,7 @@ const CountryPage = props => {
       ) : (
         <>
           {_.isEmpty(groupList) ? (
-            <Header as="h2">There are no groups for this country</Header>
+            <Header as="h2">There are no groups for this country.</Header>
           ) : (
             <GroupList
               groupList={groupList}
