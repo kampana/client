@@ -15,13 +15,3 @@ export function _fetchGroups(
 export function _fetchGroup(groupId, options) {
   return http.get(`group/${groupId}`, options).then(({ data }) => data);
 }
-
-export function dummyFetchGroups() {
-  axios.create({
-    baseURL: '/',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-  });
-  return axios.get('./groups.json').then(({ data }) => data);
-}

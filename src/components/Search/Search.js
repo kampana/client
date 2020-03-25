@@ -17,8 +17,8 @@ const Search = () => {
   const [isLoading] = useState(false);
   const history = useHistory();
 
-  const handleResultSelect = (e, { result: { title } }) => {
-    history.push(`/group/${title}`);
+  const handleResultSelect = (e, { result: { id } }) => {
+    history.push(`/group/${id}`);
   };
 
   return (

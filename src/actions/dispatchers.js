@@ -6,18 +6,24 @@ import {
   FETCH_GROUPS_BY_COUNTRY,
   FETCH_GROUP_BY_ID,
 } from './types';
-import { dummyFetchGroups, _fetchGroups, _fetchGroup } from '../api/groups';
+import { _fetchGroups, _fetchGroup } from '../api/groups';
 import { _fetchCountries, _fetchCountry } from '../api/countries';
 
 // TODO: implement error handling 'redux promise middleware' style
 
 export const handleSearchChange = (dispatch, searchValue) => {
+  // THIS IS BROKEN
+  // NEED TO REPLACE WITH API CALL
   const searchTerm = searchValue.toLowerCase();
   dispatch({
     type: SET_SEARCH_VALUE,
     value: searchTerm,
   });
-  return dummyFetchGroups()
+  // LOGIC HERE
+  // SET SEARCH RESULTS LIKE THIS:
+  // dispatch({ type: SET_SEARCH_RESULTS, value: searchResults });
+
+  /* return dummyFetchGroups()
     .then(result => {
       const searchResults = result
         .filter(
@@ -40,7 +46,7 @@ export const handleSearchChange = (dispatch, searchValue) => {
     .catch(error => {
       // TODO: error handling
       throw error;
-    });
+    }); */
 };
 
 export const fetchCountries = async dispatch => {
