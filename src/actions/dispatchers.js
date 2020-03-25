@@ -1,5 +1,8 @@
 import { SET_SEARCH_VALUE, SET_SEARCH_RESULTS, FETCH_COUNTRIES } from './types';
 import { dummyFetchGroups } from '../api/groups';
+import { _fetchCountries } from '../api/countries';
+
+// TODO: implement error handling 'redux promise middleware' style
 
 export const handleSearchChange = (dispatch, searchValue) => {
   const searchTerm = searchValue.toLowerCase();
@@ -33,4 +36,21 @@ export const handleSearchChange = (dispatch, searchValue) => {
         throw reason;
       })
   );
+};
+
+export const fetchCountries = async dispatch => {
+  try {
+    const response = await _fetchCountries();
+    const {
+      country: countryList,
+      total_items: totalCountries,
+    } = response._embedded;
+    dispatch({
+      type: FETCH_COUNTRIES,
+      value: { countryList, totalCountries },
+    });
+    // setIsLoading(false);
+  } catch (error) {
+    console.log(error);
+  }
 };
