@@ -40,7 +40,7 @@ const CountryPage = props => {
     if (!name) fetchCountryById(dispatch, countryId);
     async function fetchGroups() {
       try {
-        if (!groupList || !groupList[countryId]) {
+        if (!groupList.find(g => g._embedded.country.id === countryId)) {
           setIsFetchingGroups(true);
           await fetchGroupsByCountry(dispatch, countryId);
           setIsFetchingGroups(false);
@@ -57,6 +57,7 @@ const CountryPage = props => {
   };
 
   const countryName = name || (activeCountry && activeCountry.name);
+  const groups = groupList.filter(g => g._embedded.country.id === countryId);
 
   return (
     <Container>
@@ -77,11 +78,11 @@ const CountryPage = props => {
         </Loader>
       ) : (
         <>
-          {_.isEmpty(groupList) ? (
+          {_.isEmpty(groups) ? (
             <Header as="h2">There are no groups for this country.</Header>
           ) : (
             <GroupList
-              groupList={groupList}
+              groupList={groups}
               handleGroupClicked={handleGroupClicked}
             />
           )}
