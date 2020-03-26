@@ -21,7 +21,7 @@ const GroupList = ({ groupList, handleGroupClicked }) => {
     }
     return [firstChunk].concat(chunk(array.slice(size, array.length), size));
   };
-  const pagedGroups = chunk(groupList, PAGE_SIZE);
+  const pagedGroups = chunk(Object.values(groupList), PAGE_SIZE);
 
   return (
     <>

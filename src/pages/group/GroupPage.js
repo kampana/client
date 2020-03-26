@@ -32,14 +32,9 @@ const GroupPage = props => {
   const {
     match: { params },
   } = props;
-  const { groupId } = params;
+  const { countryId, groupId } = params;
 
-  const [
-    {
-      groups: { groupList },
-    },
-    dispatch,
-  ] = useStateContext();
+  const [{ groups }, dispatch] = useStateContext();
   const [isFetchingGroup, setIsFetchingGroup] = useState(false);
 
   useEffect(() => {
@@ -53,24 +48,27 @@ const GroupPage = props => {
         // console.log(error);
       }
     }
-    fetchGroup();
+    if (
+      !groups.byCountryId[countryId] ||
+      !groups.byCountryId[countryId][groupId]
+    )
+      fetchGroup();
   }, [groupId]);
 
-  const group = groupList && groupList.find(g => g.id === groupId);
+  const group =
+    groups.byCountryId[countryId] && groups.byCountryId[countryId][groupId];
 
   return (
     <Container>
       <Segment basic style={{ paddingLeft: '0', paddingRight: '0' }}>
         <Link
-          to={
-            group
-              ? `/country/${group._embedded.country.id}?name=${group._embedded.country.name}`
-              : '/'
-          }
+          to={`/${countryId}${
+            group ? `?name=${group._embedded.country.name}` : ''
+          }`}
         >
           <Button>
             <Icon name="arrow left" />
-            {group ? group._embedded.country.name : 'Home'}
+            {group ? group._embedded.country.name : 'Back'}
           </Button>
         </Link>
       </Segment>

@@ -30,7 +30,7 @@ const CountryPage = props => {
   const [
     {
       countries: { activeCountry },
-      groups: { groupList, totalGroups },
+      groups,
     },
     dispatch,
   ] = useStateContext();
@@ -40,11 +40,9 @@ const CountryPage = props => {
     if (!name) fetchCountryById(dispatch, countryId);
     async function fetchGroups() {
       try {
-        if (!groupList.find(g => g._embedded.country.id === countryId)) {
-          setIsFetchingGroups(true);
-          await fetchGroupsByCountry(dispatch, countryId);
-          setIsFetchingGroups(false);
-        }
+        setIsFetchingGroups(true);
+        await fetchGroupsByCountry(dispatch, countryId);
+        setIsFetchingGroups(false);
       } catch (error) {
         setIsFetchingGroups(false);
       }
@@ -52,12 +50,12 @@ const CountryPage = props => {
     fetchGroups();
   }, [countryId]);
 
-  const handleGroupClicked = groupName => {
-    history.push(`/group/${groupName}`);
+  const handleGroupClicked = groupId => {
+    history.push(`/${countryId}/${groupId}`);
   };
 
   const countryName = name || (activeCountry && activeCountry.name);
-  const groups = groupList.filter(g => g._embedded.country.id === countryId);
+  const groupList = groups.byCountryId[countryId];
 
   return (
     <Container>
@@ -72,17 +70,17 @@ const CountryPage = props => {
         <Header as="h1">{countryName || <Loader active inline />}</Header>
       </Segment>
 
-      {isFetchingGroups ? (
+      {_.isEmpty(groupList) && isFetchingGroups ? (
         <Loader active inline="centered">
           Loading our list of groups for you...
         </Loader>
       ) : (
         <>
-          {_.isEmpty(groups) ? (
+          {_.isEmpty(groupList) ? (
             <Header as="h2">There are no groups for this country.</Header>
           ) : (
             <GroupList
-              groupList={groups}
+              groupList={groupList}
               handleGroupClicked={handleGroupClicked}
             />
           )}

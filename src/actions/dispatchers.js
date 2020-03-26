@@ -73,18 +73,16 @@ export const fetchCountryById = async (
 };
 
 export const fetchGroupsByCountry = async (dispatch, countryId) => {
-  const response = await _fetchGroups(countryId);
-  const {
-    _embedded: { group: groupList },
-    total_items: totalGroups,
-  } = response;
+  const { byCountryId } = await _fetchGroups(countryId);
+
   dispatch({
     type: FETCH_GROUPS_BY_COUNTRY,
-    value: { groupList, totalGroups },
+    value: byCountryId,
   });
 };
 
 export const fetchGroupById = async (dispatch, groupId) => {
-  const group = await _fetchGroup(groupId);
-  dispatch({ type: FETCH_GROUP_BY_ID, value: [group] });
+  const { byCountryId } = await _fetchGroup(groupId);
+
+  dispatch({ type: FETCH_GROUP_BY_ID, value: byCountryId });
 };

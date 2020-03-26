@@ -20,8 +20,8 @@ function App() {
       <Layout>
         <Switch>
           <Route exact path="/" component={HomePage} />
-          <Route exact path="/country/:countryId" component={CountryPage} />
-          <Route exact path="/group/:groupId" component={GroupPage} />
+          <Route exact path="/:countryId" component={CountryPage} />
+          <Route exact path="/:countryId/:groupId" component={GroupPage} />
           <Route exact path="/wirvsvirushack" component={WirvsvirushackPage} />
           <Route
             render={() => (

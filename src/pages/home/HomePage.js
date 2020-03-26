@@ -23,7 +23,7 @@ const HomePage = () => {
   }, []);
 
   const handleCountryClicked = (countryId, countryName) => {
-    history.push(`/country/${countryId}?name=${countryName}`);
+    history.push(`/${countryId}?name=${countryName}`);
   };
 
   return (
