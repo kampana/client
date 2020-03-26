@@ -10,6 +10,77 @@
       content="We connect international grassroot movements bringing together technology and civic ressources to mobilise crowd-sourced innovation and join forces worldwide to speed up impact."
     />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/app-icon.png" />
+    <!-- Open graph tags -->
+    <meta property="og:site_name" content="CivicTechHub" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://civictechhub.netlify.com" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:title" content="CivicTechHub" />
+    <meta
+      property="og:description"
+      content="We connect international grassroot movements bringing together technology and civic ressources to mobilise crowd-sourced innovation and join forces worldwide to speed up impact."
+    />
+    <meta
+      property="og:image"
+      content="https://civictechhub.netlify.com/image-generic.png"
+    />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="CivicTechHub" />
+    <meta
+      name="twitter:description"
+      content="We connect international grassroot movements bringing together technology and civic ressources to mobilise crowd-sourced innovation and join forces worldwide to speed up impact."
+    />
+
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://civictechhub.netlify.com",
+            "name": "CivicTechHub",
+            "url": "https://civictechhub.netlify.com",
+            "sameAs": [
+              "https://twitter.com/civictechhub",
+              "https://www.instagram.com/civictechhub/",
+              "https://www.youtube.com/channel/UCWjIvbOBLmToD4vrOHED89Q",
+              "https://twitter.com/civictechhub"
+            ],
+            "logo": {
+              "@type": "ImageObject",
+              "@id": "https://civictechhub.netlify.com/#logo",
+              "inLanguage": "de-DE",
+              "url": "https://civictechhub.netlify.com/app-icon.png",
+              "width": 512,
+              "height": 512,
+              "caption": "CivicTechHub"
+            },
+            "image": { "@id": "https://civictechhub.netlify.com/#logo" }
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://civictechhub.netlify.com/#website",
+            "url": "https://civictechhub.netlify.com/",
+            "name": "CivicTechHub",
+            "inLanguage": "en-US",
+            "publisher": {
+              "@id": "https://civictechhub.netlify.com/#organization"
+            },
+            "potentialAction": [
+              {
+                "@type": "SearchAction",
+                "target": "https://civictechhub.netlify.com/?s={search_term_string}",
+                "query-input": "required name=search_term_string"
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+
     <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
