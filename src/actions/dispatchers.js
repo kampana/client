@@ -36,13 +36,13 @@ export const handleSearchChange = async (dispatch, searchValue) => {
         results: results[searchGroupKey]
           .slice(0, MAX_RESULTS_PER_GROUP)
           .map(r => {
-            //
+            // TEMPORARY: set thumbnail image for imgur image
             const logoUrl =
               (r.logoUrl || r.logo_url) && searchGroupKey === RESULT_TYPE_GROUP;
             const quality = 'b';
             const imgurThumb = logoUrl
               ? [
-                  logoUrl.slice(0),
+                  logoUrl.slice(0, logoUrl.lastIndexOf('.')),
                   quality,
                   logoUrl.slice(logoUrl.lastIndexOf('.')),
                 ].join('')
