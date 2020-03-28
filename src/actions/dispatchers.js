@@ -29,21 +29,20 @@ export const handleSearchChange = async (dispatch, searchValue) => {
   const { results } = await _querySearch(searchTerm);
 
   const formattedResults = Object.keys(results)
-    .filter(key => key !== 'topic') // TODO: remove when topic page is set up
+    .filter(key => key !== 'topic' && results[key].length) // TODO: remove condition `key !== 'topic'` when topic page is set up
     .reduce((prev, searchGroupKey) => {
-      if (!results[searchGroupKey].length) return prev;
-
       prev[searchGroupKey] = {
         name: searchGroupKey,
         results: results[searchGroupKey]
           .slice(0, MAX_RESULTS_PER_GROUP)
           .map(r => {
+            //
             const logoUrl =
               (r.logoUrl || r.logo_url) && searchGroupKey === RESULT_TYPE_GROUP;
             const quality = 'b';
             const imgurThumb = logoUrl
               ? [
-                  logoUrl.slice(0, logoUrl.lastIndexOf('.')),
+                  logoUrl.slice(0),
                   quality,
                   logoUrl.slice(logoUrl.lastIndexOf('.')),
                 ].join('')

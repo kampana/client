@@ -17,16 +17,13 @@ const Search = () => {
   const [isLoading, setIsLoading] = useState(false);
   const history = useHistory();
 
-  const handleResultSelect = (
-    e,
-    { result: { id, country_id, countryId, group } },
-  ) => {
+  const handleResultSelect = (e, { result: { id, countryId, group } }) => {
     if (group === 'country') {
       history.push(`/${id}`);
     }
 
-    if (group === 'group' && (countryId || country_id) && id) {
-      history.push(`/${countryId || country_id}/${id}`);
+    if (group === 'group' && countryId && id) {
+      history.push(`/${countryId}/${id}`);
     }
   };
 
