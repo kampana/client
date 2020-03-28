@@ -34,7 +34,6 @@ export const handleSearchChange = async (dispatch, searchValue) => {
 
       prev[searchGroupKey] = {
         name: searchGroupKey,
-        title: 'lol',
         results: results[searchGroupKey]
           .slice(0, MAX_RESULTS_PER_GROUP)
           .map(r => ({
@@ -84,7 +83,7 @@ export const fetchGroupsByCountry = async (dispatch, countryId) => {
 };
 
 export const fetchGroupById = async (dispatch, groupId) => {
-  const { byCountryId } = await _fetchGroup(groupId);
+  const result = await _fetchGroup(groupId);
 
-  dispatch({ type: FETCH_GROUP_BY_ID, value: byCountryId });
+  dispatch({ type: FETCH_GROUP_BY_ID, value: result });
 };

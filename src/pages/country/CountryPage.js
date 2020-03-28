@@ -16,15 +16,15 @@ import {
   fetchGroupsByCountry,
 } from '../../actions/dispatchers';
 import { useStateContext } from '../../state';
-import useQuery from '../../lib/useQuery';
 
 const CountryPage = props => {
   const {
     match: { params },
+    location: {
+      state: { name },
+    },
   } = props;
   const { countryId } = params;
-  const query = useQuery();
-  const name = query.get('name');
   const [isFetchingGroups, setIsFetchingGroups] = useState(false);
 
   const [
@@ -48,10 +48,10 @@ const CountryPage = props => {
       }
     }
     fetchGroups();
-  }, [countryId]);
+  }, [countryId, dispatch, name]);
 
   const handleGroupClicked = groupId => {
-    history.push(`/${countryId}/${groupId}`);
+    history.push(`/group/${groupId}`);
   };
 
   const countryName = name || (activeCountry && activeCountry.name);

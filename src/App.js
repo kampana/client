@@ -1,6 +1,6 @@
 // @flow
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import 'semantic-ui-css/semantic.min.css';
 
 import ScrollToTop from './components/ScrollToTop';
@@ -26,11 +26,7 @@ function App() {
             path="/country/:countryId(\d+)"
             component={CountryPage}
           />
-          <Route
-            exact
-            path="/group/:countryId(\d+)/:groupId(\d+)"
-            component={GroupPage}
-          />
+          <Route exact path="/group/:groupId(\d+)" component={GroupPage} />
           {/* TODO: Create topic pages */}
           {/* <Route
             exact

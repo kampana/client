@@ -21,7 +21,6 @@ const Search = () => {
     e,
     { result: { id, country_id, countryId, group } },
   ) => {
-    console.log(id, country_id, countryId, group);
     if (group === 'country') {
       history.push(`/${id}`);
     }
