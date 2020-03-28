@@ -9,6 +9,7 @@ export const _querySearch = (
     .get('search', {
       params: {
         phrase: searchValue,
+        limit: 5,
         entities: ['country', 'topic', 'group'].join(','),
         ...options,
       },
