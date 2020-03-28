@@ -50,7 +50,7 @@ const GroupPage = props => {
     }
 
     fetchGroup();
-  }, [groupId]);
+  }, [groupId, dispatch]);
 
   const group = groups[groupId] || null;
   const country = ((group || {})._embedded || {}).country || null;

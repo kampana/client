@@ -14,6 +14,7 @@ import { _querySearch } from '../api/search';
 
 export const handleSearchChange = async (dispatch, searchValue) => {
   const MAX_RESULTS_PER_GROUP = 5;
+  const RESULT_TYPE_GROUP = 'group';
   const searchTerm = searchValue.toLowerCase();
 
   dispatch({
@@ -36,13 +37,28 @@ export const handleSearchChange = async (dispatch, searchValue) => {
         name: searchGroupKey,
         results: results[searchGroupKey]
           .slice(0, MAX_RESULTS_PER_GROUP)
-          .map(r => ({
-            id: r.id,
-            title: r.name,
-            countryId: r.countryId || r.country_id,
-            group: searchGroupKey,
-            // ...r.description && { description: r.description },
-          })),
+          .map(r => {
+            const logoUrl =
+              (r.logoUrl || r.logo_url) && searchGroupKey === RESULT_TYPE_GROUP;
+            const quality = 'b';
+            const imgurThumb = logoUrl
+              ? [
+                  logoUrl.slice(0, logoUrl.lastIndexOf('.')),
+                  quality,
+                  logoUrl.slice(logoUrl.lastIndexOf('.')),
+                ].join('')
+              : null;
+
+            return {
+              id: r.id,
+              title: r.name,
+              countryId: r.countryId || r.country_id,
+              ...(logoUrl && { logoUrl }),
+              ...(imgurThumb && { image: imgurThumb }),
+              group: searchGroupKey,
+              // ...r.description && { description: r.description },
+            };
+          }),
       };
       return prev;
     }, {});

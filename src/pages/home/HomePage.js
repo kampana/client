@@ -11,7 +11,7 @@ import CountryList from '../../components/CountryList/CountryList';
 const HomePage = () => {
   const [
     {
-      countries: { countryList, totalCountries },
+      countries: { countryList }, // totalCountries
     },
     dispatch,
   ] = useStateContext();
@@ -20,7 +20,7 @@ const HomePage = () => {
 
   useEffect(() => {
     if (!countryList) fetchCountries(dispatch);
-  }, []);
+  }, [countryList, dispatch]);
 
   const handleCountryClicked = (countryId, countryName) => {
     history.push(`/country/${countryId}`, {

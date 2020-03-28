@@ -1,6 +1,6 @@
 // @flow
 import React, { useState, useEffect } from 'react';
-import { useParams, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import { Container, Loader } from 'semantic-ui-react';
 import Markdown from 'react-markdown';
 import NoMatch from '../404';
@@ -18,10 +18,16 @@ function useGettingMarkdown(markdownName) {
   useEffect(() => {
     async function fetchMarkdown() {
       try {
-        const response = await fetch(`${process.env.PUBLIC_URL}/documents/${markdownName}.md`);
-        const isMarkdownFile = response.headers.get('Content-Type').includes('text/markdown');
+        const response = await fetch(
+          `${process.env.PUBLIC_URL}/documents/${markdownName}.md`,
+        );
+        const isMarkdownFile = response.headers
+          .get('Content-Type')
+          .includes('text/markdown');
 
-        if (!isMarkdownFile) throw new Error(`${markdownName} doesn't match with any file`);
+        if (!isMarkdownFile) {
+          throw new Error(`${markdownName} doesn't match with any file`);
+        }
 
         const markdown = await response.text();
         setStatus(LOAD_STATUS.SUCCESS);
