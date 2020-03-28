@@ -8,45 +8,47 @@ import {
 } from './types';
 import { _fetchGroups, _fetchGroup } from '../api/groups';
 import { _fetchCountries, _fetchCountry } from '../api/countries';
+import { _querySearch } from '../api/search';
 
 // TODO: implement error handling 'redux promise middleware' style
 
-export const handleSearchChange = (dispatch, searchValue) => {
-  // THIS IS BROKEN
-  // NEED TO REPLACE WITH API CALL
+export const handleSearchChange = async (dispatch, searchValue) => {
+  const MAX_RESULTS_PER_GROUP = 5;
   const searchTerm = searchValue.toLowerCase();
+
   dispatch({
     type: SET_SEARCH_VALUE,
     value: searchTerm,
   });
-  // LOGIC HERE
-  // SET SEARCH RESULTS LIKE THIS:
-  // dispatch({ type: SET_SEARCH_RESULTS, value: searchResults });
 
-  /* return dummyFetchGroups()
-    .then(result => {
-      const searchResults = result
-        .filter(
-          ({
-            'group name': name,
-            'Topics (separated by |||)': topicString,
-          }) => {
-            const matchesTopics = topicString.includes(searchTerm);
+  if (searchValue.length < 2) {
+    return null;
+  }
 
-            return name.toLowerCase().includes(searchTerm) || matchesTopics;
-          },
-        )
-        .map(r => ({
-          title: r['group name'],
-          description: r['Topics (separated by |||)'].split('|||').join(', '),
-          // image: r.logo,
-        }));
-      dispatch({ type: SET_SEARCH_RESULTS, value: searchResults });
-    })
-    .catch(error => {
-      // TODO: error handling
-      throw error;
-    }); */
+  const { results } = await _querySearch(searchTerm);
+
+  const formattedResults = Object.keys(results)
+    .filter(key => key !== 'topic') // TODO: remove when topic page is set up
+    .reduce((prev, searchGroupKey) => {
+      if (!results[searchGroupKey].length) return prev;
+
+      prev[searchGroupKey] = {
+        name: searchGroupKey,
+        title: 'lol',
+        results: results[searchGroupKey]
+          .slice(0, MAX_RESULTS_PER_GROUP)
+          .map(r => ({
+            id: r.id,
+            title: r.name,
+            countryId: r.countryId || r.country_id,
+            group: searchGroupKey,
+            // ...r.description && { description: r.description },
+          })),
+      };
+      return prev;
+    }, {});
+
+  dispatch({ type: SET_SEARCH_RESULTS, value: formattedResults });
 };
 
 export const fetchCountries = async dispatch => {

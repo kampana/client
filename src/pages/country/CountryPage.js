@@ -72,7 +72,7 @@ const CountryPage = props => {
 
       {_.isEmpty(groupList) && isFetchingGroups ? (
         <Loader active inline="centered">
-          Loading our list of groups for you...
+          Loading groups…
         </Loader>
       ) : (
         <>

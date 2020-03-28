@@ -28,7 +28,7 @@ const GroupList = ({ groupList, handleGroupClicked }) => {
       <ListWrap>
         <Card.Group stackable itemsPerRow="4">
           {pagedGroups[currentPage - 1].map(group => {
-            const { name, description, logo } = group;
+            const { name, description, logo, id } = group;
             let clampedDescription = description;
             const maxChars = 170;
             if (description.length > maxChars) {
@@ -38,7 +38,7 @@ const GroupList = ({ groupList, handleGroupClicked }) => {
             }
 
             return (
-              <Card onClick={() => handleGroupClicked(group.id)} key={group.id}>
+              <Card onClick={() => handleGroupClicked(id)} key={id}>
                 {/* <Link to={`/group/${demoGroupID}`} key={groupName}> */}
                 <Image
                   src={

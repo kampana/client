@@ -38,7 +38,7 @@ const HomePage = () => {
         </>
       ) : (
         <Loader active inline="centered">
-          Loading our list of countries for you...
+          Loading countries…
         </Loader>
       )}
     </Container>

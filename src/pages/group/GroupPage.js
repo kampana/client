@@ -51,8 +51,9 @@ const GroupPage = props => {
     if (
       !groups.byCountryId[countryId] ||
       !groups.byCountryId[countryId][groupId]
-    )
+    ) {
       fetchGroup();
+    }
   }, [groupId]);
 
   const group =
@@ -75,7 +76,7 @@ const GroupPage = props => {
 
       {isFetchingGroup ? (
         <Loader active inline="centered">
-          Loading the group for you...
+          Loading…
         </Loader>
       ) : (
         <>
