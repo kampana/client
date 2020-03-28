@@ -1,9 +1,17 @@
 // @flow
 import React, { useState, useEffect } from 'react';
-import { useParams, useLocation } from 'react-router-dom';
-import { Container, Loader } from 'semantic-ui-react';
+import { useLocation } from 'react-router-dom';
+import styled from 'styled-components';
+import { Container as ContainerUI, Loader } from 'semantic-ui-react';
 import Markdown from 'react-markdown';
 import NoMatch from '../404';
+import { HeadingRenderer } from './renderers';
+
+const Container = styled(ContainerUI)`
+  img {
+    width: 70%;
+  }
+`;
 
 const LOAD_STATUS = {
   FAIL: 'FAIL',
@@ -57,7 +65,7 @@ const MarkdownPage = () => {
     default:
       return (
         <Container>
-          <Markdown source={content} />
+          <Markdown source={content} renderers={{ heading: HeadingRenderer }} />
         </Container>
       );
   }
