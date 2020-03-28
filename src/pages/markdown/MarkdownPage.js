@@ -26,10 +26,16 @@ function useGettingMarkdown(markdownName) {
   useEffect(() => {
     async function fetchMarkdown() {
       try {
-        const response = await fetch(`${process.env.PUBLIC_URL}/documents/${markdownName}.md`);
-        const isMarkdownFile = response.headers.get('Content-Type').includes('text/markdown');
+        const response = await fetch(
+          `${process.env.PUBLIC_URL}/documents/${markdownName}.md`,
+        );
+        const isMarkdownFile = response.headers
+          .get('Content-Type')
+          .includes('text/markdown');
 
-        if (!isMarkdownFile) throw new Error(`${markdownName} doesn't match with any file`);
+        if (!isMarkdownFile) {
+          throw new Error(`${markdownName} doesn't match with any file`);
+        }
 
         const markdown = await response.text();
         setStatus(LOAD_STATUS.SUCCESS);

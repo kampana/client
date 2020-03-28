@@ -14,21 +14,34 @@ const Search = () => {
     dispatch,
   ] = useStateContext();
 
-  const [isLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   const history = useHistory();
 
-  const handleResultSelect = (e, { result: { id } }) => {
-    history.push(`/group/${id}`);
+  const handleResultSelect = (e, { result: { id, countryId, group } }) => {
+    if (group === 'country') {
+      history.push(`/${id}`);
+    }
+
+    if (group === 'group' && countryId && id) {
+      history.push(`/${countryId}/${id}`);
+    }
   };
 
   return (
     <Responsive as={Menu.Item} minWidth={576} position="right">
       <SearchElement
+        category
         placeholder="Search name or topic"
         loading={isLoading}
         onResultSelect={handleResultSelect}
+        minCharacters={2}
         onSearchChange={_.debounce(
-          e => handleSearchChange(dispatch, e.target.value),
+          e => {
+            setIsLoading(true);
+            handleSearchChange(dispatch, e.target.value).then(() => {
+              setIsLoading(false);
+            });
+          },
           300,
           {
             leading: true,

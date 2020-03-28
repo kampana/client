@@ -6,12 +6,15 @@ export const INITIAL_STATE = {
 };
 
 const groupsReducer = (state = INITIAL_STATE, action) => {
+  const { value: group } = action;
+
   switch (action.type) {
     case FETCH_GROUPS_BY_COUNTRY:
     case FETCH_GROUP_BY_ID:
       return {
         ...state,
-        byCountryId: _.merge(state.byCountryId, action.value),
+        [group.id]: group,
+        byCountryId: _.merge(state.byCountryId, group),
       };
     default:
       return state;

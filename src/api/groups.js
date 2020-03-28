@@ -30,7 +30,5 @@ export function _fetchGroups(
 }
 
 export function _fetchGroup(groupId, options) {
-  return http
-    .get(`group/${groupId}`, options)
-    .then(({ data }) => normalize(data, groupsByCountryIdSchema).entities);
+  return http.get(`group/${groupId}`, options).then(({ data }) => data);
 }

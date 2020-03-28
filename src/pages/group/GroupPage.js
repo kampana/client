@@ -32,7 +32,7 @@ const GroupPage = props => {
   const {
     match: { params },
   } = props;
-  const { countryId, groupId } = params;
+  const { groupId } = params;
 
   const [{ groups }, dispatch] = useStateContext();
   const [isFetchingGroup, setIsFetchingGroup] = useState(false);
@@ -48,40 +48,45 @@ const GroupPage = props => {
         // console.log(error);
       }
     }
-    if (
-      !groups.byCountryId[countryId] ||
-      !groups.byCountryId[countryId][groupId]
-    )
-      fetchGroup();
-  }, [groupId]);
 
-  const group =
-    groups.byCountryId[countryId] && groups.byCountryId[countryId][groupId];
+    fetchGroup();
+  }, [groupId, dispatch]);
+
+  const group = groups[groupId] || null;
+  const country = ((group || {})._embedded || {}).country || null;
 
   return (
     <Container>
       <Segment basic style={{ paddingLeft: '0', paddingRight: '0' }}>
-        <Link
-          to={`/${countryId}${
-            group ? `?name=${group._embedded.country.name}` : ''
-          }`}
-        >
-          <Button>
-            <Icon name="arrow left" />
-            {group ? group._embedded.country.name : 'Back'}
-          </Button>
-        </Link>
+        {country && (
+          <Link
+            to={{
+              pathname: `/country/${country.id}`,
+              state: { name: country.name },
+            }}
+          >
+            <Button>
+              <Icon name="arrow left" />
+              {group ? group._embedded.country.name : 'Back'}
+            </Button>
+          </Link>
+        )}
       </Segment>
 
       {isFetchingGroup ? (
         <Loader active inline="centered">
-          Loading the group for you...
+          Loading group…
         </Loader>
       ) : (
         <>
           {group ? (
             <>
-              <Image src={group.logo} style={{ marginBottom: '5rem' }} />
+              {!!(group.logoUrl || group.logo) && (
+                <Image
+                  src={group.logoUrl || group.logo}
+                  style={{ marginBottom: '5rem' }}
+                />
+              )}
 
               <Header as="h1">{group.name}</Header>
 
@@ -97,7 +102,7 @@ const GroupPage = props => {
                     <Segment>
                       <Header as="h2">Topics</Header>
                       {group.topics.map(topic => {
-                        return <Label>{topic.name}</Label>;
+                        return <Label key={topic.id}>{topic.name}</Label>;
                       })}
                     </Segment>
 
@@ -106,7 +111,7 @@ const GroupPage = props => {
                       <List>
                         {group.serviceLinks.map(serviceLink => {
                           return (
-                            <List.Item>
+                            <List.Item key={serviceLink.id}>
                               <List.Icon
                                 name={LINK_TYPE_ICONS[serviceLink.type]}
                                 size="large"

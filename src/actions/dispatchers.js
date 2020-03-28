@@ -8,45 +8,61 @@ import {
 } from './types';
 import { _fetchGroups, _fetchGroup } from '../api/groups';
 import { _fetchCountries, _fetchCountry } from '../api/countries';
+import { _querySearch } from '../api/search';
 
 // TODO: implement error handling 'redux promise middleware' style
 
-export const handleSearchChange = (dispatch, searchValue) => {
-  // THIS IS BROKEN
-  // NEED TO REPLACE WITH API CALL
+export const handleSearchChange = async (dispatch, searchValue) => {
+  const MAX_RESULTS_PER_GROUP = 5;
+  const RESULT_TYPE_GROUP = 'group';
   const searchTerm = searchValue.toLowerCase();
+
   dispatch({
     type: SET_SEARCH_VALUE,
     value: searchTerm,
   });
-  // LOGIC HERE
-  // SET SEARCH RESULTS LIKE THIS:
-  // dispatch({ type: SET_SEARCH_RESULTS, value: searchResults });
 
-  /* return dummyFetchGroups()
-    .then(result => {
-      const searchResults = result
-        .filter(
-          ({
-            'group name': name,
-            'Topics (separated by |||)': topicString,
-          }) => {
-            const matchesTopics = topicString.includes(searchTerm);
+  if (searchValue.length < 2) {
+    return null;
+  }
 
-            return name.toLowerCase().includes(searchTerm) || matchesTopics;
-          },
-        )
-        .map(r => ({
-          title: r['group name'],
-          description: r['Topics (separated by |||)'].split('|||').join(', '),
-          // image: r.logo,
-        }));
-      dispatch({ type: SET_SEARCH_RESULTS, value: searchResults });
-    })
-    .catch(error => {
-      // TODO: error handling
-      throw error;
-    }); */
+  const { results } = await _querySearch(searchTerm);
+
+  const formattedResults = Object.keys(results)
+    .filter(key => key !== 'topic' && results[key].length) // TODO: remove condition `key !== 'topic'` when topic page is set up
+    .reduce((prev, searchGroupKey) => {
+      prev[searchGroupKey] = {
+        name: searchGroupKey,
+        results: results[searchGroupKey]
+          .slice(0, MAX_RESULTS_PER_GROUP)
+          .map(r => {
+            // TEMPORARY: set thumbnail image for imgur image
+            const logoUrl =
+              (r.logoUrl || r.logo_url) && searchGroupKey === RESULT_TYPE_GROUP;
+            const quality = 'b';
+            const imgurThumb = logoUrl
+              ? [
+                  logoUrl.slice(0, logoUrl.lastIndexOf('.')),
+                  quality,
+                  logoUrl.slice(logoUrl.lastIndexOf('.')),
+                ].join('')
+              : null;
+
+            return {
+              id: r.id,
+              title: r.name,
+              countryId: r.countryId || r.country_id,
+              ...(logoUrl && { logoUrl }),
+              ...(imgurThumb && { image: imgurThumb }),
+              group: searchGroupKey,
+              // ...r.description && { description: r.description },
+            };
+          }),
+      };
+      return prev;
+    }, {});
+
+  dispatch({ type: SET_SEARCH_RESULTS, value: formattedResults });
 };
 
 export const fetchCountries = async dispatch => {
@@ -82,7 +98,7 @@ export const fetchGroupsByCountry = async (dispatch, countryId) => {
 };
 
 export const fetchGroupById = async (dispatch, groupId) => {
-  const { byCountryId } = await _fetchGroup(groupId);
+  const result = await _fetchGroup(groupId);
 
-  dispatch({ type: FETCH_GROUP_BY_ID, value: byCountryId });
+  dispatch({ type: FETCH_GROUP_BY_ID, value: result });
 };
