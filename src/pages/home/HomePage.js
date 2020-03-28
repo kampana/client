@@ -7,6 +7,7 @@ import { fetchCountries } from '../../actions/dispatchers';
 // import { Link } from 'react-router-dom';
 
 import CountryList from '../../components/CountryList/CountryList';
+import Sponsors from '../../components/Sponsors/Sponsors';
 
 const HomePage = () => {
   const [
@@ -37,6 +38,7 @@ const HomePage = () => {
             countryList={countryList}
             handleCountryClicked={handleCountryClicked}
           />
+          <Sponsors />
         </>
       ) : (
         <Loader active inline="centered">
