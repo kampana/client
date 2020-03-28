@@ -25,13 +25,11 @@ const Sponsors = () => {
     <Container>
       <Header as={'h1'}>Supporters</Header>
       <Grid doubling columns={listOfSponsors.length}>
-        {
-          listOfSponsors.map(sponsor => (
-            <Grid.Column key={sponsor.name}>
-                <Image src={sponsor.image} size={'medium'} circular />
-            </Grid.Column>
-          ))
-        }
+        {listOfSponsors.map((sponsor) => (
+          <Grid.Column key={sponsor.name}>
+            <Image src={sponsor.image} size={'medium'} circular />
+          </Grid.Column>
+        ))}
       </Grid>
     </Container>
   );
