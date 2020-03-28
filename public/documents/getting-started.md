@@ -95,7 +95,9 @@ If you don’t know by yet – no problem. Just ask *@Vincent Verheyen* or anyon
 
 - GitHub: https://github.com/civictechhub 
 
-- Trello (client): https://trello.com/b/MmhCufus/civictechhub-client 
+- Github Board (client) - Next todos: https://github.com/civictechhub/client/projects/1
+
+- Github Board (client) - Feature requests: https://github.com/civictechhub/client/projects/2
 
 - Trello (api): https://trello.com/b/IwKXfSSO/civictechhub-api 
 
