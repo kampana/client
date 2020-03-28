@@ -20,7 +20,7 @@ const ParagrahStyle = styled.p`
 
 const About = () => {
   return (
-    <span>
+    <div>
       <Header as="h1">About</Header>
       <GlobalMargin>
         <ParagrahStyle>
@@ -47,7 +47,7 @@ const About = () => {
           </a>
         </ParagrahStyle>
       </GlobalMargin>
-    </span>
+    </div>
   );
 };
 
