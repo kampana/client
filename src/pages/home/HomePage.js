@@ -1,51 +1,36 @@
 // @flow
-import React, { useEffect } from 'react';
-import { Container, Header, Loader } from 'semantic-ui-react';
-import { useHistory } from 'react-router-dom';
-import { useStateContext } from '../../state';
-import { fetchCountries } from '../../actions/dispatchers';
-// import { Link } from 'react-router-dom';
+import React from 'react';
+import styled from 'styled-components';
+// import { Container, Header, Loader } from 'semantic-ui-react';
+// import { useHistory, Link } from 'react-router-dom';
+// import { useStateContext } from '../../state';
 
-import CountryList from '../../components/CountryList/CountryList';
-import Supporters from '../../components/Supporters/Supporters';
+import {
+  Hero,
+  SearchBar,
+  RecentGroups,
+  About,
+  Actions,
+  Sponsors,
+} from '../../components/Modules';
+
+const StyledHomePage = styled.div``;
 
 const HomePage = () => {
-  const [
-    {
-      countries: { countryList }, // totalCountries
-    },
-    dispatch,
-  ] = useStateContext();
-
-  const history = useHistory();
-
-  useEffect(() => {
-    if (!countryList) fetchCountries(dispatch);
-  }, [countryList, dispatch]);
-
-  const handleCountryClicked = (countryId, countryName) => {
-    history.push(`/country/${countryId}`, {
-      name: countryName,
-    });
-  };
-
   return (
-    <Container>
-      {countryList ? (
-        <>
-          <Header as="h1">Choose your country</Header>
-          <CountryList
-            countryList={countryList}
-            handleCountryClicked={handleCountryClicked}
-          />
-          <Supporters />
-        </>
-      ) : (
-        <Loader active inline="centered">
-          Loading countries…
-        </Loader>
-      )}
-    </Container>
+    <StyledHomePage>
+      <Hero />
+
+      <SearchBar />
+
+      <RecentGroups />
+
+      <About />
+
+      <Actions />
+
+      <Sponsors />
+    </StyledHomePage>
   );
 };
 

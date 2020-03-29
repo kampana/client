@@ -1,6 +1,6 @@
 // @flow
-import OverviewPage from './OverviewPage';
+import HomePage from './HomePage';
 
 export default {
-  OverviewPage,
+  HomePage,
 };
