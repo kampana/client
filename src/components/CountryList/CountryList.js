@@ -5,7 +5,7 @@ import { Flag, Card } from 'semantic-ui-react';
 const CountryList = ({ countryList, handleCountryClicked }) => {
   return (
     <Card.Group stackable itemsPerRow="4">
-      {countryList.map(country => {
+      {countryList.map((country) => {
         const { id, name, iso3166Code, countGroups } = country;
 
         return (
