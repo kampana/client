@@ -20,10 +20,9 @@ import { useStateContext } from '../../state';
 const CountryPage = props => {
   const {
     match: { params },
-    location: {
-      state: { name },
-    },
+    location: { state },
   } = props;
+  const { name } = state || {};
   const { countryId } = params;
   const [isFetchingGroups, setIsFetchingGroups] = useState(false);
 

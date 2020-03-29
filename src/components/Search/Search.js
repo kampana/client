@@ -19,7 +19,7 @@ const Search = () => {
 
   const handleResultSelect = (e, { result: { id, countryId, group } }) => {
     if (group === 'country') {
-      history.push(`/${id}`);
+      history.push(`/country/${id}`);
     }
 
     if (group === 'group' && countryId && id) {
