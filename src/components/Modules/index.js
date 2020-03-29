@@ -4,6 +4,6 @@ import SearchBar from './SearchBar';
 import RecentGroups from './RecentGroups';
 import About from './About';
 import Actions from './Actions';
-import Sponsors from './Sponsors';
+import Sponsors from './Sponsors/Sponsors';
 
 export { Hero, SearchBar, RecentGroups, About, Actions, Sponsors };
