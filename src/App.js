@@ -13,6 +13,7 @@ import NoMatch from './pages/404';
 
 // TODO: Remove this temporary page
 import WirvsvirushackPage from './pages/wirvsvirushack/WirvsvirushackPage';
+import CountriesPage from './pages/countries/CountriesPage';
 
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
             path="/topic/:topicId"
             component={TopicPage}
           /> */}
+          <Route exact path="/countries" component={CountriesPage} />
           <Route exact path="/wirvsvirushack" component={WirvsvirushackPage} />
           <Route exact path="/getting-started" component={MarkdownPage} />
           <Route render={NoMatch} />
