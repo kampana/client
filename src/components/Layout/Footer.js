@@ -10,7 +10,6 @@ import {
 } from 'semantic-ui-react';
 import styled from 'styled-components/macro';
 import packageJson from '../../../package.json';
-import About from '../About/About';
 
 const logoHackathon = require('../../images/logo-wirvsvirus.png');
 
@@ -157,8 +156,6 @@ const Footer = () => {
           </Grid>
         </Container>
       </SecondaryFooter>
-      {/* TODO URI just for testing purposes */}
-      <About />
     </StyledFooter>
   );
 };
