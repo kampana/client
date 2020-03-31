@@ -23,7 +23,7 @@ const Search = () => {
     }
 
     if (group === 'group' && countryId && id) {
-      history.push(`/${countryId}/${id}`);
+      history.push(`/group/${id}`);
     }
   };
 
