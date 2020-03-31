@@ -28,7 +28,7 @@ const LINK_TYPE_ICONS = {
   INSTAGRAM: 'instagram',
 };
 
-const GroupPage = props => {
+const GroupPage = (props) => {
   const {
     match: { params },
   } = props;
@@ -101,7 +101,7 @@ const GroupPage = props => {
                   <Grid.Column>
                     <Segment>
                       <Header as="h2">Topics</Header>
-                      {group.topics.map(topic => {
+                      {group.topics.map((topic) => {
                         return <Label key={topic.id}>{topic.name}</Label>;
                       })}
                     </Segment>
@@ -109,7 +109,7 @@ const GroupPage = props => {
                     <Segment>
                       <Header as="h2">Resources & Links</Header>
                       <List>
-                        {group.serviceLinks.map(serviceLink => {
+                        {group.serviceLinks.map((serviceLink) => {
                           return (
                             <List.Item key={serviceLink.id}>
                               <List.Icon

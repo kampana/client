@@ -36,7 +36,7 @@ const Search = () => {
         onResultSelect={handleResultSelect}
         minCharacters={2}
         onSearchChange={_.debounce(
-          e => {
+          (e) => {
             setIsLoading(true);
             handleSearchChange(dispatch, e.target.value).then(() => {
               setIsLoading(false);
