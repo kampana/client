@@ -28,6 +28,33 @@ const LINK_TYPE_ICONS = {
   INSTAGRAM: 'instagram',
 };
 
+const serviceLabels = (type, url) => {
+  const LINK_LABELS = {
+    SLACK: 'Slack',
+    FACEBOOK: 'Facebook',
+    TWITTER: 'Twitter',
+    TRELLO: 'Trello',
+    DEVPOST: 'Devpost',
+    VIMEO: 'Vimeo',
+    YOUTUBE: 'Youtube',
+    DISCORD: 'Discord',
+    GITHUB: 'Github',
+    INSTAGRAM: 'Instagram',
+    TELEGRAM: 'Telegram',
+    OTHER: 'Other',
+    WHATSAPP: 'WhatsApp',
+    JOGL: 'JOGL',
+    MAIN_WEBSITE: 'Website',
+    E_MAIL: 'E-Mail',
+  };
+
+  if (type === 'WEBSITE') {
+    return url.split('/')[2] || url.split('/')[0];
+  }
+
+  return LINK_LABELS[type];
+};
+
 const GroupPage = (props) => {
   const {
     match: { params },
@@ -119,32 +146,6 @@ const GroupPage = (props) => {
                               : 1,
                           )
                           .map((s) => {
-                            const serviceLabels = (type, url) => {
-                              const LINK_LABELS = {
-                                SLACK: 'Slack',
-                                FACEBOOK: 'Facebook',
-                                TWITTER: 'Twitter',
-                                TRELLO: 'Trello',
-                                DEVPOST: 'Devpost',
-                                VIMEO: 'Vimeo',
-                                YOUTUBE: 'Youtube',
-                                DISCORD: 'Discord',
-                                GITHUB: 'Github',
-                                INSTAGRAM: 'Instagram',
-                                TELEGRAM: 'Telegram',
-                                OTHER: 'Other',
-                                WHATSAPP: 'WhatsApp',
-                                JOGL: 'JOGL',
-                                MAIN_WEBSITE: 'Website',
-                                E_MAIL: 'E-Mail',
-                              };
-
-                              if (type === 'WEBSITE') {
-                                return url.split('/')[2] || url.split('/')[0];
-                              }
-
-                              return LINK_LABELS[type];
-                            };
                             // console.log(serviceLink);
                             return (
                               <List.Item key={s.id}>
