@@ -5,9 +5,9 @@ const groupsByCountryIdSchema = new schema.Entity(
   'byCountryId',
   {},
   {
-    processStrategy: value => ({ [value.id]: value }),
+    processStrategy: (value) => ({ [value.id]: value }),
     mergeStrategy: (entityA, entityB) => ({ ...entityA, ...entityB }),
-    idAttribute: value => {
+    idAttribute: (value) => {
       return value.countryId;
     },
   },
