@@ -8,7 +8,7 @@ import {
 } from 'semantic-ui-react';
 import styled from 'styled-components/macro';
 
-const logoHackathon = require('../../images/about-group.png');
+const logoHackathon = require('../../images/about-group.svg');
 
 const ParagrahStyle = styled.div`
     color: white;
