@@ -29,10 +29,10 @@
 --------------------*/
 
 /* This is the single variable that controls them all */
-@emSize   : 14px;
+@emSize   : 18px;
 
 /* The size of page text  */
-@fontSize : 14px;
+@fontSize : 18px;
 
 
 /*-------------------
@@ -42,8 +42,8 @@
 /* See Power-user section below
    for explanation of @px variables
 */
-@relativeBorderRadius: @relative4px;
-@absoluteBorderRadius: @4px;
+@relativeBorderRadius: @relative10px;
+@absoluteBorderRadius: @10px;
 
 @defaultBorderRadius: @absoluteBorderRadius;
 
@@ -78,8 +78,8 @@
 
 /* This adjusts the default form input across all elements */
 @inputBackground        : @white;
-@inputVerticalPadding   : @relative11px;
-@inputHorizontalPadding : @relative14px;
+@inputVerticalPadding   : @relative23px;
+@inputHorizontalPadding : @relative20px;
 @inputPadding           : @inputVerticalPadding @inputHorizontalPadding;
 
 /* Input Text Color */
