@@ -5,6 +5,7 @@ import styled from 'styled-components';
 // import { useHistory, Link } from 'react-router-dom';
 // import { useStateContext } from '../../state';
 
+import { Grid } from 'semantic-ui-react';
 import {
   Hero,
   SearchBar,
@@ -14,22 +15,53 @@ import {
   Sponsors,
 } from '../../components/Modules';
 
-const StyledHomePage = styled.div``;
+const StyledHomePage = styled.div`
+.ui.button {
+  margin-top: 1rem;
+  border-radius: 10px;
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  padding: 1.5rem;
+}
+`;
 
 const HomePage = () => {
   return (
     <StyledHomePage>
-      <Hero />
+      <Grid columns={2} stackable centered>
+        <Grid.Row>
+          <Grid.Column>
+            <Hero />
+          </Grid.Column>
+        </Grid.Row>
+        <Grid.Row>
+          <Grid.Column>
+            <SearchBar />
+          </Grid.Column>
+        </Grid.Row>
+        <Grid.Row>
+          <Grid.Column>
+            <RecentGroups />
+          </Grid.Column>
+        </Grid.Row>
+        <Grid.Row>
+          <Grid.Column>
+            <About />
+          </Grid.Column>
+        </Grid.Row>
+        <Grid.Row>
+          <Grid.Column>
+            <Actions />
+          </Grid.Column>
+        </Grid.Row>
+        <Grid.Row>
+          <Grid.Column>
+            <Sponsors />
+          </Grid.Column>
+        </Grid.Row>
+      </Grid>
 
-      <SearchBar />
-
-      <RecentGroups />
-
-      <About />
-
-      <Actions />
-
-      <Sponsors />
     </StyledHomePage>
   );
 };
