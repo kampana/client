@@ -6,6 +6,7 @@ import styled from 'styled-components';
 // import { useStateContext } from '../../state';
 
 import { Grid } from 'semantic-ui-react';
+import { blue } from '../../config/variables';
 import {
   Hero,
   SearchBar,
@@ -19,7 +20,7 @@ const StyledHomePage = styled.div`
 .ui.button {
   margin-top: 1rem;
   border-radius: 10px;
-  background-color: transparent;
+  background-color: ${blue};
   border: 1px solid white;
   color: white;
   padding: 1.5rem;

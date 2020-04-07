@@ -10,19 +10,20 @@ import {
 } from 'semantic-ui-react';
 import styled from 'styled-components/macro';
 import aboutImage from '../../images/about-group.svg';
+import { blue, lightBlue } from '../../config/variables';
 
 const ParagrahStyle = styled.div`
     color: white;
 `;
 
 const BackgroundBox = styled.div`
-    background-color: #061F71;
+    background-color: ${blue};
     border-radius: 15px;
     overflow: hidden;
 `;
 
 const ImageBoxHorizontal = styled.div`
-    background-color: #3B4E8F;
+    background-color: ${lightBlue};
     height: 100%;
     width: 100%;
     border-radius: 0px 7rem 7rem 0px;
@@ -30,7 +31,7 @@ const ImageBoxHorizontal = styled.div`
 `;
 
 const ImageBoxVertical = styled.div`
-    background-color: #3B4E8F;
+    background-color: ${lightBlue};
     height: 100%;
     width: 100%;
     border-radius: 7rem 7rem 0px 0px;
