@@ -1,6 +1,11 @@
 {
   "parser": "babel-eslint",
-  "extends": ["airbnb", "plugin:import/errors", "plugin:import/warnings"],
+  "extends": [
+    "airbnb",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "prettier"
+  ],
   "plugins": ["babel", "import", "react"],
   "env": {
     "es6": true,
