@@ -4,6 +4,7 @@ import React from 'react';
 import { withRouter } from 'react-router-dom';
 import styled, { createGlobalStyle } from 'styled-components';
 
+import * as v from '../../config/variables';
 import Header from './Header';
 import Footer from './Footer';
 import { StateProvider } from '../../state';
@@ -11,21 +12,29 @@ import mainReducer from '../../reducers';
 import initialState from '../../reducers/initialState';
 
 const GlobalStyle = createGlobalStyle`
-  body {
-    color: #3a3a3a;
+  h1, h2, h3, h4, h5, h6,
+  .h1, .h2, .h3, .h4, .h5, .h6 {
+    color: ${v.black}; 
+
+    &.ui.header {
+      color: ${v.black}; 
+     }
   }
 
-  h1 {
+  h1, .h1 {
+    color: ${v.primary};
+
     &.ui.header {
-      margin-bottom: 2rem; 
+      color: ${v.primary}; 
     }
   }
+  
 
-  a {
-    color: #A13262;
+  h3 {
+    font-weight: normal; 
 
-    &:hover {
-      color: #A13262;
+    &.ui.header {
+      font-weight: normal; 
     }
   }
 `;
@@ -40,7 +49,7 @@ const App = styled.div`
   }
 `;
 
-const Layout = props => {
+const Layout = (props) => {
   const { children } = props;
 
   return (

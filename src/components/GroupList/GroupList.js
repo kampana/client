@@ -27,7 +27,7 @@ const GroupList = ({ groupList, handleGroupClicked }) => {
     <>
       <ListWrap>
         <Card.Group stackable itemsPerRow="4">
-          {pagedGroups[currentPage - 1].map(group => {
+          {pagedGroups[currentPage - 1].map((group) => {
             const { name, description, logo, id } = group;
             let clampedDescription = description;
             const maxChars = 170;

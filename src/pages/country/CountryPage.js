@@ -17,7 +17,7 @@ import {
 } from '../../actions/dispatchers';
 import { useStateContext } from '../../state';
 
-const CountryPage = props => {
+const CountryPage = (props) => {
   const {
     match: { params },
     location: { state },
@@ -49,7 +49,7 @@ const CountryPage = props => {
     fetchGroups();
   }, [countryId, dispatch, name]);
 
-  const handleGroupClicked = groupId => {
+  const handleGroupClicked = (groupId) => {
     history.push(`/group/${groupId}`);
   };
 

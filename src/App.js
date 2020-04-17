@@ -1,7 +1,6 @@
 // @flow
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import 'semantic-ui-css/semantic.min.css';
 
 import ScrollToTop from './components/ScrollToTop';
 import Layout from './components/Layout';

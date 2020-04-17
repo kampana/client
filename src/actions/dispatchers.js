@@ -29,16 +29,15 @@ export const handleSearchChange = async (dispatch, searchValue) => {
   const { results } = await _querySearch(searchTerm);
 
   const formattedResults = Object.keys(results)
-    .filter(key => key !== 'topic' && results[key].length) // TODO: remove condition `key !== 'topic'` when topic page is set up
+    .filter((key) => key !== 'topic' && results[key].length) // TODO: remove condition `key !== 'topic'` when topic page is set up
     .reduce((prev, searchGroupKey) => {
       prev[searchGroupKey] = {
         name: searchGroupKey,
         results: results[searchGroupKey]
           .slice(0, MAX_RESULTS_PER_GROUP)
-          .map(r => {
+          .map((r) => {
             // TEMPORARY: set thumbnail image for imgur image
-            const logoUrl =
-              (r.logoUrl || r.logo_url) && searchGroupKey === RESULT_TYPE_GROUP;
+            const logoUrl = searchGroupKey === RESULT_TYPE_GROUP && r.logoUrl;
             const quality = 'b';
             const imgurThumb = logoUrl
               ? [
@@ -65,7 +64,7 @@ export const handleSearchChange = async (dispatch, searchValue) => {
   dispatch({ type: SET_SEARCH_RESULTS, value: formattedResults });
 };
 
-export const fetchCountries = async dispatch => {
+export const fetchCountries = async (dispatch) => {
   const response = await _fetchCountries();
   const {
     _embedded: { country: countryList },
@@ -83,7 +82,7 @@ export const fetchCountryById = async (
   countryList = [], // optional
 ) => {
   const country =
-    countryList.find(c => c.id === countryId) ||
+    countryList.find((c) => c.id === countryId) ||
     (await _fetchCountry(countryId));
   dispatch({ type: FETCH_COUNTRY_BY_ID, value: country });
 };

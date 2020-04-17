@@ -1,6 +1,11 @@
 {
   "parser": "babel-eslint",
-  "extends": ["airbnb", "plugin:import/errors", "plugin:import/warnings"],
+  "extends": [
+    "airbnb",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "prettier"
+  ],
   "plugins": ["babel", "import", "react"],
   "env": {
     "es6": true,
@@ -56,6 +61,9 @@
     "no-return-assign": 0,
     "import/default": 0,
     "react/jsx-props-no-spreading": 0,
-    "arrow-parens": 0
+    "consistent-return": 0,
+    "lodash/import-scope": 1,
+    "no-nested-ternary": 1
+    // "arrow-parens": 0
   }
 }
