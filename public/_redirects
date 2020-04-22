@@ -1,1 +1,7 @@
 /*    /index.html   200
+
+# Redirect all sites to primary domain
+http://civictechhub.netlify.com/* https://civictechhub.org/:splat 301!
+https://civictechhub.netlify.com/* https://civictechhub.org/:splat 301!
+http://civictechhub.netlify.app/* https://civictechhub.org/:splat 301!
+https://civictechhub.netlify.app/* https://civictechhub.org/:splat 301!
